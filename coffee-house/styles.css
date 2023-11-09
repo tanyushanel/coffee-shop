@@ -1,0 +1,81 @@
+:root {
+  /* COLOR VARIABLES */
+  --text-dark-color: rgb(65, 63, 61);
+  --text-light-color: rgb(225, 212, 201);
+  --text-accent-color: rgb(176, 144, 122);
+
+  --bg-body-color: rgb(225, 212, 201);
+  --bg-container-color: rgb(102, 95, 85);
+  --bg-backdrop-color: rgb(103, 101, 100);
+
+  --border-light-color: rgb(193, 182, 173);
+
+  --border-dark-color: rgb(102, 95, 85);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: Inter;
+}
+
+h1 {
+  font-size: 72px;
+  font-weight: 600;
+  line-height: 105%;
+}
+
+h1.logo {
+  position: absolute;
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+h2 {
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 125%;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 125%;
+}
+
+.accent-txt {
+  font-style: italic;
+}
+
+.medium-txt {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.caption-txt {
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 140%;
+}
+
+a {
+  text-decoration: none;
+}
+
+a,
+button {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 150%;
+}
+
+a.burger {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 125%;
+}
