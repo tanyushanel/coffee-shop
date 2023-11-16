@@ -24,21 +24,29 @@
       <header>
         <div class="nav-bar">
           <h1 class="invisible">Coffee House</h1>
-          <a href="index.html"><img src="assets/icons/logo.png" /></a>
+          <a href="index.html">
+            <img class="logo" src="assets/icons/logo.png" alt="logo"
+          /></a>
           <ul class="nav-bar-menu gap-40">
-            <li class="menu-item"><a href="#">Favorite coffee</a></li>
-            <li class="menu-item"><a href="#">About</a></li>
-            <li class="menu-item"><a href="#">Mobile app</a></li>
-            <li class="menu-item"><a href="#">Contact us</a></li>
+            <li class="menu-item"><a href="#slider">Favorite coffee</a></li>
+            <li class="menu-item"><a href="#about">About</a></li>
+            <li class="menu-item"><a href="#mobile">Mobile app</a></li>
+            <li class="menu-item"><a href="#contact">Contact us</a></li>
           </ul>
-          <button class="burger-menu gap-10">
-            Menu
-            <img src="assets/icons/coffee-cup.png" />
-          </button>
+          <a href="menu.html" class="burger-menu">
+            <img
+              class="burder-menu-button"
+              src="assets/icons/menu-burger.png"
+              alt="burger-menu-pic"
+            />
+            <button class="burger-menu-desc gap-10">
+              Menu <img src="assets/icons/coffee-cup.png" alt="coffee-cup" />
+            </button>
+          </a>
         </div>
 
         <div class="head-banner">
-          <img src="assets/pics/img-hero.jpg" />
+          <img src="assets/pics/img-hero.jpg" alt="banner" />
           <div class="banner-desc">
             <h1>
               <span class="accent-txt">Enjoy</span> premium coffee at our
@@ -50,15 +58,26 @@
               and those seeking a warm and inviting space to enjoy their
               favorite beverage.
             </p>
-            <button class="banner-button button-primary">Menu</button>
+            <a
+              href="menu.html"
+              class="banner-button button-primary bg-fill-light"
+            >
+              Menu
+            </a>
           </div>
         </div>
       </header>
       <main class="margin-100">
-        <div class="slider-container center">
+        <article id="slider" class="slider-container center">
           <h2>Choose your <span class="accent-txt">favorite</span> coffee</h2>
-          <div class="slider margin-40">
-            <div class="slider-button"></div>
+          <div class="slider center margin-40">
+            <button class="slider-button">
+              <img
+                class="arrow arrow-left"
+                src="assets/icons/arrow-default.png"
+                alt="arrow-left"
+              />
+            </button>
             <div class="slider-content">
               <img class="slider-img" src="assets/pics/coffee-slider-1.png" />
               <h3 class="margin-15">S’mores Frappuccino</h3>
@@ -66,17 +85,23 @@
                 This new drink takes an espresso and mixes it with brown sugar
                 and cinnamon before being topped with oat milk.
               </p>
-              <h3 class="price margin-20">$5.50</h3>
+              <h3 class="price">$5.50</h3>
             </div>
-            <div class="slider-button"></div>
+            <button class="slider-button">
+              <img
+                class="arrow"
+                src="assets/icons/arrow-default.png"
+                alt="arrow-right"
+              />
+            </button>
           </div>
           <div class="slider-controls gap-10">
             <p class="slider-control"></p>
             <p class="slider-control"></p>
             <p class="slider-control"></p>
           </div>
-        </div>
-        <div class="about margin-100">
+        </article>
+        <article id="about" class="about-container margin-100">
           <h2 class="margin-40">
             Resource is
             <span class="accent-txt">the perfect and cozy place</span> where you
@@ -89,8 +114,8 @@
             <li class="grid-item"><img src="assets/pics/about-3.jpg" /></li>
             <li class="grid-item"><img src="assets/pics/about-4.jpg" /></li>
           </ul>
-        </div>
-        <div class="mobile-presentation margin-100 gap-100">
+        </article>
+        <article id="mobile" class="mobile-presentation margin-100 gap-100">
           <div class="mobile-desc margin-100">
             <h2 class="margin-40">
               <span class="accent-txt">Download</span> our apps to start
@@ -102,14 +127,14 @@
             </p>
             <div class="store-button-container gap-20">
               <button class="store-button gap-8">
-                <img src="assets/icons/app-icon.png" />
+                <img src="assets/icons/app-icon.png" alt="app-icon" />
                 <div class="button-desc left">
                   <p class="caption-txt">Available on the</p>
                   <p>App Store</p>
                 </div>
               </button>
               <button class="store-button gap-8">
-                <img src="assets/icons/gp-icon.png" />
+                <img src="assets/icons/gp-icon.png" alt="gp-icon" />
                 <div class="button-desc left">
                   <p class="caption-txt">Available on</p>
                   <p>Google Play</p>
@@ -118,41 +143,51 @@
             </div>
           </div>
           <div class="mobile-img">
-            <img src="assets/pics/mobile-screens.png" />
+            <img src="assets/pics/mobile-screens.png" alt="mobile-screens" />
           </div>
-        </div>
+        </article>
       </main>
       <footer class="footer bg-fill-dark light-color margin-100 gap-100">
-        <div class="contacts-heading">
+        <article id="contact" class="contacts-heading">
           <h2 class="light-color">
             Sip, Savor, Smile. <span class="accent-txt">It’s coffee time!</span>
           </h2>
           <div class="social-button-container margin-40 gap-12">
             <button class="social-button">
-              <img src="assets/icons/tweet.png" />
+              <img src="assets/icons/tweet.png" alt="tweet-pic" />
             </button>
             <button class="social-button">
-              <img src="assets/icons/instagram.png" />
+              <img src="assets/icons/instagram.png" alt="inst-pic" />
             </button>
             <button class="social-button">
-              <img src="assets/icons/fb.png" />
+              <img src="assets/icons/fb.png" alt="fb-pic" />
             </button>
           </div>
-        </div>
+        </article>
         <div class="contacts-desc">
           <h3 class="margin-30">Contact us</h3>
 
           <ul class="margin-40">
             <li class="flex-container margin-20 gap-10">
-              <img src="assets/icons/location.png" />8558 Green Rd., LA
+              <img src="assets/icons/location.png" alt="loc-icon" />
+              <a
+                class="medium-txt"
+                href="https://www.google.com/maps/search/8558+Green+Rd.,+LA"
+                target="_blank"
+                >8558 Green Rd., LA
+              </a>
             </li>
 
             <li class="flex-container margin-20 gap-10">
-              <img src="assets/icons/path.png" />+1 (603) 555-0123
+              <img src="assets/icons/path.png" alt="phone-icon" />
+              <a class="medium-txt" href="tel:1(603)555-0123"
+                >+1 (603) 555-0123
+              </a>
             </li>
 
             <li class="flex-container margin-20 gap-10">
-              <img src="assets/icons/clock.png" />Mon-Sat: 9:00 AM – 23:00 PM
+              <img src="assets/icons/clock.png" alt="clock-icon" />Mon-Sat: 9:00
+              AM – 23:00 PM
             </li>
           </ul>
         </div>
