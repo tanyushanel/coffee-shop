@@ -88,8 +88,8 @@
   color: var(--text-light-color);
 }
 
-.backdrop-color {
-  color: var(--bg-backdrop-color);
+.dark-color {
+  color: var(--text-dark-color);
 }
 
 .bg-fill-light {
@@ -103,6 +103,17 @@
 .button-primary {
   padding: 20px 79px;
   border-radius: 100px;
+}
+
+.button-secondary {
+  color: var(--border-dark-color);
+  border: 1px solid var(--border-dark-color);
+  border-radius: 100px;
+}
+
+.button-secondary:hover {
+  color: var(--border-light-color);
+  background: var(--border-dark-color);
 }
 
 .flex {
@@ -119,6 +130,8 @@
   display: flex;
   flex-wrap: wrap;
 }
+
+/* GENERAL STYLES */
 
 * {
   box-sizing: border-box;
@@ -195,7 +208,6 @@ button {
 }
 
 .nav-bar {
-  align-items: center;
   height: 55px;
   margin-bottom: 25px;
 }
@@ -207,7 +219,6 @@ button {
 
 .nav-bar-menu {
   flex-basis: 1188px;
-  justify-content: center;
 }
 
 .menu-item {
@@ -220,6 +231,11 @@ button {
   font-size: 16px;
   font-weight: 600;
   line-height: 150%;
+}
+
+.burger-menu:hover,
+.nav-bar-menu a:hover {
+  box-shadow: 0px 2px 0px 0px var(--text-dark-color);
 }
 
 .burger-menu-button {
@@ -248,14 +264,6 @@ button {
   width: 530px;
 }
 
-.head-banner h1 {
-  color: var(--text-light-color);
-}
-
-.head-banner .medium-txt {
-  color: var(--text-light-color);
-}
-
 .banner-button {
   position: relative;
 }
@@ -272,16 +280,11 @@ button {
 
 .slider {
   justify-content: space-between;
-  align-items: center;
   height: 640px;
 }
 
 .slider-content {
   flex-basis: 480px;
-}
-
-.slider-controls {
-  justify-content: center;
 }
 
 .slider-control {
@@ -299,12 +302,8 @@ button {
 }
 
 .slider-button {
-  color: var(--border-dark-color);
-}
-
-.slider-button:hover {
-  color: var(--border-light-color);
-  background: var(--border-dark-color);
+  height: 60px;
+  width: 60px;
 }
 
 .arrow-left {
@@ -358,14 +357,24 @@ button {
 
 .store-button {
   padding: 12px 20px;
-  border: 1px solid var(--border-dark-color);
-  border-radius: 100px;
   width: 200px;
+}
+
+.hover {
+  display: none;
 }
 
 .store-button:hover {
   color: var(--border-light-color);
   background: var(--border-dark-color);
+}
+
+.store-button:hover img {
+  display: none;
+}
+
+.store-button:hover img.hover {
+  display: block;
 }
 
 .footer {
@@ -380,20 +389,34 @@ button {
 
 .social-button {
   border: 1px solid var(--border-light-color);
-  border-radius: 100%;
+  border-radius: 100px;
   height: 60px;
   width: 60px;
 }
 
 .social-button img {
-  display: block;
   object-fit: contain;
   width: 24px;
   height: 24px;
 }
+.social-button:hover {
+  background: var(--bg-body-color);
+}
+
+.social-button:hover img {
+  display: none;
+}
+
+.social-button:hover .hover {
+  display: block;
+}
 
 .contacts-desc li {
   align-items: baseline;
+}
+
+.contacts-desc li > a:hover {
+  box-shadow: 0px 2px 0px 0px var(--text-light-color);
 }
 
 @media (min-width: 1440px) {

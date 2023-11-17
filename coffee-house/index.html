@@ -26,12 +26,12 @@
   <body>
     <div class="container">
       <header>
-        <div class="flex nav-bar">
+        <div class="flex-center nav-bar">
           <h1 class="invisible">Coffee House</h1>
           <a href="index.html">
             <img class="logo" src="assets/icons/logo.png" alt="logo"
           /></a>
-          <ul class="flex nav-bar-menu gap-40">
+          <ul class="flex-center nav-bar-menu gap-40">
             <li class="menu-item"><a href="#slider">Favorite coffee</a></li>
             <li class="menu-item"><a href="#about">About</a></li>
             <li class="menu-item"><a href="#mobile">Mobile app</a></li>
@@ -52,11 +52,11 @@
         <div class="head-banner">
           <img class="banner-img" src="assets/pics/img-hero.jpg" alt="banner" />
           <div class="banner-desc">
-            <h1>
+            <h1 class="light-color">
               <span class="accent-txt">Enjoy</span> premium coffee at our
               charming cafe
             </h1>
-            <p class="medium-txt margin-40">
+            <p class="medium-txt margin-40 light-color">
               With its inviting atmosphere and delicious coffee options, the
               Coffee House Resource is a popular destination for coffee lovers
               and those seeking a warm and inviting space to enjoy their
@@ -81,8 +81,8 @@
       <main class="margin-100">
         <article id="slider" class="slider-container center">
           <h2>Choose your <span class="accent-txt">favorite</span> coffee</h2>
-          <div class="flex slider center margin-40">
-            <button class="flex-center slider-button social-button">
+          <div class="flex-center slider margin-40">
+            <button class="flex-center slider-button button-secondary">
               <span class="material-symbols-outlined"> arrow_back </span>
             </button>
             <div class="slider-content">
@@ -94,11 +94,11 @@
               </p>
               <h3 class="price">$5.50</h3>
             </div>
-            <button class="flex-center slider-button social-button">
+            <button class="flex-center slider-button button-secondary">
               <span class="material-symbols-outlined"> arrow_forward </span>
             </button>
           </div>
-          <div class="flex slider-controls gap-10">
+          <div class="flex-center slider-controls gap-10">
             <p class="slider-control"></p>
             <p class="slider-control"></p>
             <p class="slider-control"></p>
@@ -132,15 +132,25 @@
               ordering your favorite coffee from wherever you are
             </p>
             <div class="flex store-button-container gap-20">
-              <button class="flex store-button gap-8">
+              <button class="flex store-button button-secondary gap-8">
                 <img src="assets/icons/app-icon.png" alt="app-icon" />
+                <img
+                  class="hover"
+                  src="assets/icons/app-icon-hover.png"
+                  alt="app-icon"
+                />
                 <div class="button-desc left">
                   <p class="caption-txt">Available on the</p>
                   <p>App Store</p>
                 </div>
               </button>
-              <button class="flex store-button gap-8">
+              <button class="flex store-button button-secondary gap-8">
                 <img src="assets/icons/gp-icon.png" alt="gp-icon" />
+                <img
+                  class="hover"
+                  src="assets/icons/gp-icon-hover.png"
+                  alt="gp-icon"
+                />
                 <div class="button-desc left">
                   <p class="caption-txt">Available on</p>
                   <p>Google Play</p>
@@ -163,12 +173,23 @@
           <div class="flex social-button-container margin-40 gap-12">
             <button class="flex-center social-button">
               <img src="assets/icons/tweet.png" alt="tweet-pic" />
+              <img
+                class="hover"
+                src="assets/icons/tweet-hover.png"
+                alt="tweet-pic"
+              />
             </button>
             <button class="flex-center social-button">
               <img src="assets/icons/instagram.png" alt="inst-pic" />
+              <img
+                class="hover"
+                src="assets/icons/instagram-hover.png"
+                alt="inst-pic"
+              />
             </button>
             <button class="flex-center social-button">
               <img src="assets/icons/fb.png" alt="fb-pic" />
+              <img class="hover" src="assets/icons/fb-hover.png" alt="fb-pic" />
             </button>
           </div>
         </article>
@@ -194,8 +215,8 @@
             </li>
 
             <li class="flex margin-20 gap-10">
-              <img src="assets/icons/clock.png" alt="clock-icon" />Mon-Sat: 9:00
-              AM – 23:00 PM
+              <img src="assets/icons/clock.png" alt="clock-icon" />
+              <a class="medium-txt">Mon-Sat: 9:00 AM – 23:00 PM </a>
             </li>
           </ul>
         </div>
