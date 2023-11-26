@@ -234,8 +234,9 @@ button {
   line-height: 150%;
 }
 
+.nav-bar-menu a:hover,
 .burger-menu:hover,
-.nav-bar-menu a:hover {
+.menu.burger-menu {
   box-shadow: 0px 2px 0px 0px var(--text-dark-color);
 }
 
