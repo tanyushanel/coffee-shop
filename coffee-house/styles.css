@@ -127,6 +127,7 @@
 
 .store-button {
   padding: 12px 20px;
+  height: 64px;
   width: 200px;
 }
 
@@ -144,6 +145,10 @@
 }
 
 .store-button:hover img.hover {
+  display: block;
+}
+
+.button-desc span {
   display: block;
 }
 
