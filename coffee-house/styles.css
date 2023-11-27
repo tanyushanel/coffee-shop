@@ -242,7 +242,7 @@ input[type="radio"]:checked + label {
   .burger-menu-button {
     display: block;
   }
-  .burger-menu button {
+  .burger-menu span {
     display: none;
   }
 }
