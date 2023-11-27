@@ -112,6 +112,7 @@
 }
 
 .button-secondary:hover {
+  cursor: pointer;
   color: var(--border-light-color);
   background: var(--border-dark-color);
 }
@@ -235,8 +236,8 @@ button {
 }
 
 .nav-bar-menu a:hover,
-.burger-menu:hover,
-.menu.burger-menu {
+.burger-menu button:hover,
+.menu.burger-menu button {
   box-shadow: 0px 2px 0px 0px var(--text-dark-color);
 }
 

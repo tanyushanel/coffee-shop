@@ -52,22 +52,49 @@
       <main>
         <article class="about-container">
           <h2 class="center">
-            Behind each of our cups hides
-            <span class="accent-txt">an amazing surprise</span>
+            Behind each of our cups hides an
+            <span class="accent-txt"> amazing surprise</span>
           </h2>
           <ul class="flex-center gap-10 margin-40">
-            <li class="tab-item button-secondary medium-txt flex-center gap-10">
-              <img src="assets/icons/cup.png" alt="cup" />
-              <input type="radio" name="menu-tab" checked />
-              Coffee
+            <li>
+              <input
+                type="radio"
+                id="coffee"
+                name="menu-tab"
+                value="coffee"
+                checked
+              />
+              <label
+                for="coffee"
+                class="tab-item button-secondary medium-txt flex-center gap-8"
+              >
+                <img src="assets/icons/cup.png" alt="cup" /> Coffee
+              </label>
             </li>
-            <li class="tab-item button-secondary medium-txt flex-center gap-8">
-              <img src="assets/icons/pot.png" alt="pot" />
-              <input type="radio" name="menu-tab" />Tea
+            <li>
+              <input type="radio" id="tea" name="menu-tab" value="tea" />
+              <label
+                for="tea"
+                class="tab-item button-secondary medium-txt flex-center gap-8"
+              >
+                <img src="assets/icons/pot.png" alt="pot" />
+                Tea</label
+              >
             </li>
-            <li class="tab-item button-secondary medium-txt flex-center gap-8">
-              <img src="assets/icons/dessert.png" alt="des" />
-              <input type="radio" name="menu-tab" />Dessert
+            <li>
+              <input
+                type="radio"
+                id="dessert"
+                name="menu-tab"
+                value="dessert"
+              />
+              <label
+                for="dessert"
+                class="tab-item button-secondary medium-txt flex-center gap-8"
+              >
+                <img src="assets/icons/dessert.png" alt="des" />
+                Dessert
+              </label>
             </li>
           </ul>
           <article>
@@ -76,25 +103,27 @@
                 <div class="grid-item">
                   <img src="assets/pics/coffee-1.jpg" alt="pic" />
                 </div>
-
-                <h3 class="margin-15 content">Espresso</h3>
-                <p class="margin-15 content medium-txt cut">
-                  Fragrant black coffee with Jameson Irish whiskey and whipped
-                  milk
-                </p>
-                <h3 class="price">$7.00</h3>
+                <div class="grid-item-desc margin-20 flex gap-12">
+                  <a href="#"><h3>Espresso</h3></a>
+                  <p class="medium-txt cut">
+                    Fragrant black coffee with Jameson Irish whiskey and whipped
+                    milk
+                  </p>
+                  <h3 class="price">$7.00</h3>
+                </div>
               </li>
               <li class="grid-menu-item">
                 <div class="grid-item">
                   <img src="assets/pics/coffee-2.jpg" alt="pic" />
                 </div>
-
-                <h3 class="margin-15 content">Espresso</h3>
-                <p class="margin-15 content medium-txt cut">
-                  Fragrant black coffee with Jameson Irish whiskey and whipped
-                  milk
-                </p>
-                <h3 class="price">$4.50</h3>
+                <div class="grid-item-desc margin-20 flex gap-12">
+                  <a href="#"><h3>Espresso</h3></a>
+                  <p class="medium-txt cut">
+                    Fragrant black coffee with Jameson Irish whiskey and whipped
+                    milk
+                  </p>
+                  <h3 class="price">$4.50</h3>
+                </div>
               </li>
 
               <li class="grid-menu-item">
@@ -102,71 +131,81 @@
                   <img src="assets/pics/coffee-3.jpg" alt="pic" />
                 </div>
 
-                <h3 class="margin-15 content">Coffee with cognac</h3>
-                <p class="margin-15 content medium-txt cut">
-                  Fragrant black coffee with cognac and whipped cream
-                </p>
-                <h3 class="price">$4.50</h3>
+                <div class="grid-item-desc margin-20 flex gap-12">
+                  <a href="#">
+                    <h3>Coffee with cognac</h3>
+                  </a>
+                  <p class="medium-txt cut">
+                    Fragrant black coffee with cognac and whipped cream
+                  </p>
+                  <h3 class="price">$4.50</h3>
+                </div>
               </li>
               <li class="grid-menu-item">
                 <div class="grid-item">
                   <img src="assets/pics/coffee-4.jpg" alt="pic" />
                 </div>
 
-                <h3 class="margin-15 content">Espresso</h3>
-                <p class="margin-15 content medium-txt cut">
-                  Fragrant black coffee with Jameson Irish whiskey and whipped
-                  milk
-                </p>
-                <h3 class="price">$7.00</h3>
+                <div class="grid-item-desc margin-20 flex gap-12">
+                  <a href="#"><h3>Espresso</h3></a>
+                  <p class="medium-txt cut">
+                    Fragrant black coffee with Jameson Irish whiskey and whipped
+                    milk
+                  </p>
+                  <h3 class="price">$7.00</h3>
+                </div>
               </li>
               <li class="grid-menu-item">
                 <div class="grid-item">
                   <img src="assets/pics/coffee-5.jpg" alt="pic" />
                 </div>
-
-                <h3 class="margin-15 content">Espresso</h3>
-                <p class="margin-15 content medium-txt cut">
-                  Fragrant black coffee with Jameson Irish whiskey and whipped
-                  milk
-                </p>
-                <h3 class="price">$7.00</h3>
+                <div class="grid-item-desc margin-20 flex gap-12">
+                  <a href="#"><h3>Espresso</h3></a>
+                  <p class="medium-txt cut">
+                    Fragrant black coffee with Jameson Irish whiskey and whipped
+                    milk
+                  </p>
+                  <h3 class="price">$7.00</h3>
+                </div>
               </li>
               <li class="grid-menu-item">
                 <div class="grid-item">
                   <img src="assets/pics/coffee-6.jpg" alt="pic" />
                 </div>
-
-                <h3 class="margin-15 content">Espresso</h3>
-                <p class="margin-15 content medium-txt cut">
-                  Fragrant black coffee with Jameson Irish whiskey and whipped
-                  milk
-                </p>
-                <h3 class="price">$7.00</h3>
+                <div class="grid-item-desc margin-20 flex gap-12">
+                  <a href="#"><h3>Espresso</h3></a>
+                  <p class="medium-txt cut">
+                    Fragrant black coffee with Jameson Irish whiskey and whipped
+                    milk
+                  </p>
+                  <h3 class="price">$7.00</h3>
+                </div>
               </li>
               <li class="grid-menu-item">
                 <div class="grid-item">
                   <img src="assets/pics/coffee-7.jpg" alt="pic" />
                 </div>
-
-                <h3 class="margin-15 content">Espresso</h3>
-                <p class="margin-15 content medium-txt cut">
-                  Fragrant black coffee with Jameson Irish whiskey and whipped
-                  milk
-                </p>
-                <h3 class="price">$7.00</h3>
+                <div class="grid-item-desc margin-20 flex gap-12">
+                  <a href="#"><h3>Espresso</h3></a>
+                  <p class="medium-txt cut">
+                    Fragrant black coffee with Jameson Irish whiskey and whipped
+                    milk
+                  </p>
+                  <h3 class="price">$7.00</h3>
+                </div>
               </li>
               <li class="grid-menu-item">
                 <div class="grid-item">
                   <img src="assets/pics/coffee-8.jpg" alt="pic" />
                 </div>
-
-                <h3 class="margin-15 content">Espresso</h3>
-                <p class="margin-15 content medium-txt cut">
-                  Fragrant black coffee with Jameson Irish whiskey and whipped
-                  milk
-                </p>
-                <h3 class="price">$7.00</h3>
+                <div class="grid-item-desc margin-20 flex gap-12">
+                  <a href="#"><h3>Espresso</h3></a>
+                  <p class="medium-txt cut">
+                    Fragrant black coffee with Jameson Irish whiskey and whipped
+                    milk
+                  </p>
+                  <h3 class="price">$7.00</h3>
+                </div>
               </li>
             </ul>
           </article>

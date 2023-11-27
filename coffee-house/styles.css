@@ -160,18 +160,17 @@ h2.center {
   border: 1px solid var(--border-light-color);
 }
 
-.tab-item input[type="radio"] {
+input[type="radio"] {
   position: fixed;
   opacity: 0;
-  pointer-events: none;
   padding: 8px;
   padding-right: 18px;
   font-weight: 600;
   border: 1px solid var(--border-light-color);
 }
 
-.tab-item input[type="radio"]:checked,
-.tab-item:first-child {
+.tab-item:focus-within,
+input[type="radio"]:checked + label {
   color: var(--border-light-color);
   background: var(--border-dark-color);
 }
@@ -205,14 +204,15 @@ h2.center {
   height: 100%;
 }
 
-.grid-menu-item .content {
+.grid-item-desc {
+  flex-direction: column;
   padding: 0 20px;
 }
 
-.grid-menu-item .price {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
+.grid-item-desc h3 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .grid-menu-item .cut {
@@ -233,10 +233,15 @@ h2.center {
 }
 
 @media (max-width: 768px) {
+  .container {
+    max-width: 768px;
+    padding: 20px;
+  }
+
   .burger-menu-button {
     display: block;
   }
-  .burger-menu-desc {
+  .burger-menu button {
     display: none;
   }
 }
