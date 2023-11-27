@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+
+    <title>Coffee House</title>
+    <meta name="Coffee House" content="Coffee House" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+    <link href="styles.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <div class="flex-center nav-bar">
+          <h1 class="invisible">Coffee House</h1>
+          <a href="index.html">
+            <img class="logo" src="assets/icons/logo.png" alt="logo"
+          /></a>
+          <ul class="flex-center nav-bar-menu gap-40">
+            <li class="menu-item"><a href="#slider">Favorite coffee</a></li>
+            <li class="menu-item"><a href="#about">About</a></li>
+            <li class="menu-item"><a href="#mobile">Mobile app</a></li>
+            <li class="menu-item"><a href="#contact">Contact us</a></li>
+          </ul>
+          <a href="menu.html" class="burger-menu">
+            <img
+              class="burger-menu-button"
+              src="assets/icons/menu-burger.png"
+              alt="burger-menu-pic"
+            />
+            <button class="flex gap-10">
+              Menu <img src="assets/icons/coffee-cup.png" alt="coffee-cup" />
+            </button>
+          </a>
+        </div>
+
+        <div class="head-banner">
+          <img class="banner-img" src="assets/pics/img-hero.jpg" alt="banner" />
+          <div class="banner-desc">
+            <h1 class="light-color">
+              <span class="accent-txt">Enjoy</span> premium coffee at our
+              charming cafe
+            </h1>
+            <p class="medium-txt margin-40 light-color">
+              With its inviting atmosphere and delicious coffee options, the
+              Coffee House Resource is a popular destination for coffee lovers
+              and those seeking a warm and inviting space to enjoy their
+              favorite beverage.
+            </p>
+            <a
+              href="menu.html"
+              class="banner-button button-primary bg-fill-light"
+            >
+              <button class="flex gap-10">
+                Menu
+                <img
+                  class="icon"
+                  src="assets/icons/coffee-cup.png"
+                  alt="coffee-cup"
+                />
+              </button>
+            </a>
+          </div>
+        </div>
+      </header>
+      <main class="margin-100">
+        <article id="slider" class="slider-container center">
+          <h2>Choose your <span class="accent-txt">favorite</span> coffee</h2>
+          <div class="flex-center slider margin-40">
+            <button class="flex-center slider-button button-secondary">
+              <span class="material-symbols-outlined"> arrow_back </span>
+            </button>
+            <div class="slider-content">
+              <img
+                class="slider-img"
+                src="assets/pics/coffee-slider-1.png"
+                alt="pic"
+              />
+              <h3 class="margin-15">S’mores Frappuccino</h3>
+              <p class="medium-txt margin-15">
+                This new drink takes an espresso and mixes it with brown sugar
+                and cinnamon before being topped with oat milk.
+              </p>
+              <h3 class="price">$5.50</h3>
+            </div>
+            <button class="flex-center slider-button button-secondary">
+              <span class="material-symbols-outlined"> arrow_forward </span>
+            </button>
+          </div>
+          <div class="flex-center slider-controls gap-10">
+            <p class="slider-control"></p>
+            <p class="slider-control"></p>
+            <p class="slider-control"></p>
+          </div>
+        </article>
+        <article id="about" class="about-container margin-100">
+          <h2 class="margin-40">
+            Resource is
+            <span class="accent-txt">the perfect and cozy place</span> where you
+            can enjoy a variety of hot beverages, relax, catch up with friends,
+            or get some work done.
+          </h2>
+          <ul class="flex grid-container gap-40">
+            <li class="grid-item">
+              <img src="assets/pics/about-1.jpg" alt="pic" />
+            </li>
+            <li class="grid-item">
+              <img src="assets/pics/about-2.jpg" alt="pic" />
+            </li>
+            <li class="grid-item">
+              <img src="assets/pics/about-3.jpg" alt="pic" />
+            </li>
+            <li class="grid-item">
+              <img src="assets/pics/about-4.jpg" alt="pic" />
+            </li>
+          </ul>
+        </article>
+        <article
+          id="mobile"
+          class="flex-wrap mobile-presentation margin-100 gap-100"
+        >
+          <div class="mobile-desc margin-100">
+            <h2 class="margin-40">
+              <span class="accent-txt">Download</span> our apps to start
+              ordering
+            </h2>
+            <p class="medium-txt margin-40">
+              Download the Resource app today and experience the comfort of
+              ordering your favorite coffee from wherever you are
+            </p>
+            <div class="flex store-button-container gap-20">
+              <button class="flex store-button button-secondary gap-8">
+                <img src="assets/icons/app-icon.png" alt="app-icon" />
+                <img
+                  class="hover"
+                  src="assets/icons/app-icon-hover.png"
+                  alt="app-icon"
+                />
+                <div class="button-desc left">
+                  <p class="caption-txt">Available on the</p>
+                  <p>App Store</p>
+                </div>
+              </button>
+              <button class="flex store-button button-secondary gap-8">
+                <img src="assets/icons/gp-icon.png" alt="gp-icon" />
+                <img
+                  class="hover"
+                  src="assets/icons/gp-icon-hover.png"
+                  alt="gp-icon"
+                />
+                <div class="button-desc left">
+                  <p class="caption-txt">Available on</p>
+                  <p>Google Play</p>
+                </div>
+              </button>
+            </div>
+          </div>
+          <div class="mobile-img">
+            <img src="assets/pics/mobile-screens.png" alt="mobile-screens" />
+          </div>
+        </article>
+      </main>
+      <footer
+        class="footer flex-wrap bg-fill-dark light-color margin-100 gap-100"
+      >
+        <article id="contact" class="contacts-heading">
+          <h2 class="light-color">
+            Sip, Savor, Smile.
+            <span class="accent-txt">It’s coffee time! </span>
+          </h2>
+          <div class="flex social-button-container margin-40 gap-12">
+            <button class="flex-center social-button">
+              <img src="assets/icons/tweet.png" alt="tweet-pic" />
+              <img
+                class="hover"
+                src="assets/icons/tweet-hover.png"
+                alt="tweet-pic"
+              />
+            </button>
+            <button class="flex-center social-button">
+              <img src="assets/icons/instagram.png" alt="inst-pic" />
+              <img
+                class="hover"
+                src="assets/icons/instagram-hover.png"
+                alt="inst-pic"
+              />
+            </button>
+            <button class="flex-center social-button">
+              <img src="assets/icons/fb.png" alt="fb-pic" />
+              <img class="hover" src="assets/icons/fb-hover.png" alt="fb-pic" />
+            </button>
+          </div>
+        </article>
+        <div class="contacts-desc">
+          <h3 class="margin-30">Contact us</h3>
+
+          <ul class="margin-40">
+            <li class="flex margin-20 gap-10">
+              <img src="assets/icons/location.png" alt="loc-icon" />
+              <a
+                class="medium-txt"
+                href="https://www.google.com/maps/search/8558+Green+Rd.,+LA"
+                target="_blank"
+                >8558 Green Rd., LA
+              </a>
+            </li>
+
+            <li class="flex margin-20 gap-10">
+              <img src="assets/icons/path.png" alt="phone-icon" />
+              <a class="medium-txt" href="tel:1(603)555-0123"
+                >+1 (603) 555-0123
+              </a>
+            </li>
+
+            <li class="flex margin-20 gap-10">
+              <img src="assets/icons/clock.png" alt="clock-icon" />
+              <a class="medium-txt">Mon-Sat: 9:00 AM – 23:00 PM </a>
+            </li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
