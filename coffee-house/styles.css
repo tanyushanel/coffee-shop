@@ -109,6 +109,7 @@
 
 .mobile-desc {
   width: 630px;
+  padding-top: 5px;
 }
 
 .mobile-img {
@@ -148,20 +149,20 @@
 
 /* MENU */
 
-h2.center {
+h3.center {
   width: 800px;
   margin: 0 auto;
 }
 
 .tab-item {
-  padding: 8px;
+  padding: 7px;
   padding-right: 18px;
   font-weight: 600;
   border: 1px solid var(--border-light-color);
 }
 
 input[type="radio"] {
-  position: fixed;
+  position: absolute;
   opacity: 0;
   padding: 8px;
   padding-right: 18px;
@@ -241,7 +242,7 @@ input[type="radio"]:checked + label {
   .burger-menu-button {
     display: block;
   }
-  .burger-menu button {
+  .burger-menu span {
     display: none;
   }
 }
