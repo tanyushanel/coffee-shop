@@ -318,7 +318,6 @@ button {
   text-overflow: ellipsis;
 }
 .banner-desc p {
-  /* max-height: 4.5rem; */
   overflow: hidden;
 }
 
@@ -654,12 +653,11 @@ input[type="radio"]:checked + label {
     padding: 1.25rem 5rem;
   }
 
-  .about-container {
-    margin: 40px auto;
-  }
-
   .slider {
     justify-content: center;
+  }
+  .slider-img {
+    height: 348px;
   }
   .slider .slider-button {
     display: none;
@@ -670,6 +668,13 @@ input[type="radio"]:checked + label {
     max-height: 100%;
     overflow: visible;
   }
+
+  .grid-item {
+    flex-direction: column;
+
+    height: 590px;
+  }
+
   .mobile-desc {
     margin: 40px auto;
     width: 348px;
@@ -694,7 +699,7 @@ input[type="radio"]:checked + label {
   }
 
   .footer {
-    margin: 40px auto;
+    /* margin: 40px auto; */
     padding: 60px 16px;
     gap: 20px;
   }
