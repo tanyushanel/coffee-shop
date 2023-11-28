@@ -544,7 +544,6 @@ input[type="radio"]:checked + label {
 
 @media (max-width: 1439px) {
   .container {
-    min-width: 530px;
     max-width: 1439px;
     padding: 20px 40px;
   }
