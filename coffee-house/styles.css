@@ -318,7 +318,7 @@ button {
   text-overflow: ellipsis;
 }
 .banner-desc p {
-  max-height: 4.5rem;
+  /* max-height: 4.5rem; */
   overflow: hidden;
 }
 
@@ -624,12 +624,12 @@ input[type="radio"]:checked + label {
   .container {
     max-width: 380px;
     width: 380px;
-    padding: 16px 20px;
+    padding: 20px 16px;
   }
 
   .head-banner .banner-desc {
     margin: 60px 16px;
-    max-width: 316px;
+    width: 316px;
   }
 
   h2 {
