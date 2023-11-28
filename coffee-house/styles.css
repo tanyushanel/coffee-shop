@@ -308,7 +308,7 @@ button {
 }
 
 .head-banner .banner-desc {
-  margin: 6.25rem;
+  margin: 100px;
   max-width: 33.125rem;
 }
 
@@ -544,6 +544,7 @@ input[type="radio"]:checked + label {
 
 @media (max-width: 1439px) {
   .container {
+    min-width: 530px;
     max-width: 1439px;
     padding: 20px 40px;
   }
@@ -556,6 +557,12 @@ input[type="radio"]:checked + label {
 @media (max-width: 768px) {
   .container {
     max-width: 768px;
+    padding: 20px 40px;
+  }
+
+  .head-banner .banner-desc {
+    max-width: 530px;
+    margin-left: 60px;
   }
 
   .burger-menu-button {
