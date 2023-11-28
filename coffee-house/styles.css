@@ -369,5 +369,13 @@ input[type="radio"]:checked + label {
   .footer {
     margin: 40px auto;
     padding: 60px 16px;
+    gap: 20px;
+  }
+  .social-button-container {
+    margin: 20px auto;
+  }
+
+  .contacts-desc h4 {
+    margin: 0;
   }
 }
