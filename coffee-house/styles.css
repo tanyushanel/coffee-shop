@@ -250,4 +250,12 @@ input[type="radio"]:checked + label {
   .burger-menu span {
     display: none;
   }
+
+  .nav-bar {
+    justify-content: space-between;
+  }
+
+  .nav-bar-menu {
+    display: none;
+  }
 }
