@@ -669,6 +669,11 @@ input[type="radio"]:checked + label {
     display: none;
   }
 
+  .grid-container {
+    max-height: 1220px;
+    overflow: hidden;
+  }
+
   .grid-menu-container {
     padding: 0 10px;
     max-height: 100%;
