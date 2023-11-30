@@ -306,6 +306,8 @@ button {
 .head-banner .banner-img {
   position: absolute;
   z-index: -1;
+  object-position: -285px;
+  max-height: 100%;
 }
 
 .head-banner .banner-desc {
@@ -349,7 +351,7 @@ button {
 }
 
 .slider-img {
-  height: 30rem;
+  height: 483px;
 }
 
 .slider-button {
@@ -394,11 +396,6 @@ button {
 
 .mobile-presentation {
   justify-content: center;
-}
-
-.mobile-desc {
-  max-width: 39.375rem;
-  padding-top: 5px;
 }
 
 .mobile-img {
@@ -538,6 +535,11 @@ input[type="radio"]:checked + label {
   .mobile-presentation {
     justify-content: space-between;
   }
+
+  .mobile-desc {
+    max-width: 39.375rem;
+    padding-top: 5px;
+  }
 }
 
 @media screen and (max-width: 1439px) {
@@ -580,6 +582,29 @@ input[type="radio"]:checked + label {
     margin: 100px 60px;
   }
 
+  .banner-button {
+    max-width: 200px;
+  }
+
+  .banner-button .icon {
+    display: block;
+  }
+
+  .slider-content {
+    max-width: 480px;
+  }
+
+  .grid-container {
+    max-height: 1220px;
+    overflow: hidden;
+  }
+
+  .grid-container .grid-item {
+    border-radius: 20px;
+    min-height: 590px;
+    min-width: 688px;
+  }
+
   .grid-menu-container {
     padding: 0 10px;
     max-height: 1052px;
@@ -589,6 +614,39 @@ input[type="radio"]:checked + label {
   .bttn-refresh {
     display: flex;
     margin: 20px auto;
+  }
+
+  .mobile-img {
+    margin: 0 auto;
+  }
+
+  .mobile-img img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .mobile-presentation {
+    justify-content: left;
+    min-width: 688px;
+  }
+
+  .mobile-desc {
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .mobile-desc h3 {
+    margin: 0;
+  }
+
+  .footer {
+    padding: 100px 60px;
+    gap: 25px;
+  }
+
+  .contacts-desc ul,
+  .contacts-desc ul li:last-child {
+    margin-bottom: 0;
   }
 }
 
@@ -663,15 +721,10 @@ input[type="radio"]:checked + label {
     justify-content: center;
   }
   .slider-img {
-    height: 348px;
+    height: 348px; /**/
   }
   .slider .slider-button {
     display: none;
-  }
-
-  .grid-container {
-    max-height: 1220px;
-    overflow: hidden;
   }
 
   .grid-menu-container {
@@ -680,9 +733,8 @@ input[type="radio"]:checked + label {
     overflow: visible;
   }
 
-  .grid-item {
+  .grid-container .grid-item {
     flex-direction: column;
-    height: 590px;
     min-height: 590px;
   }
 
