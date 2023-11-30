@@ -555,10 +555,6 @@ input[type="radio"]:checked + label {
     max-width: 530px;
     margin: 100px 60px;
   }
-
-  .tab-item {
-    width: 115px;
-  }
 }
 
 @media screen and (max-width: 768px) {
@@ -621,7 +617,7 @@ input[type="radio"]:checked + label {
 
   .bttn-refresh {
     display: flex;
-    margin: 20px auto;
+    margin: 40px auto;
   }
 
   .mobile-img {
