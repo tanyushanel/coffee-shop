@@ -142,8 +142,9 @@
 
 html,
 body {
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
+
   scroll-behavior: smooth;
 }
 
@@ -309,12 +310,10 @@ button {
 
 .head-banner .banner-desc {
   margin: 100px;
-  max-width: 33.125rem;
+  max-width: 530px;
 }
 
 .banner-desc h2 {
-  max-height: 24rem;
-  overflow: hidden;
   text-overflow: ellipsis;
 }
 .banner-desc p {
@@ -518,7 +517,7 @@ input[type="radio"]:checked + label {
 
 /* MEDIA QUERIES */
 
-@media (min-width: 1440px) {
+@media screen and (min-width: 1440px) {
   h3.center {
     min-width: 800px;
     margin: 0 auto;
@@ -541,10 +540,15 @@ input[type="radio"]:checked + label {
   }
 }
 
-@media (max-width: 1439px) {
+@media screen and (max-width: 1439px) {
   .container {
     max-width: 1439px;
     padding: 20px 40px;
+  }
+
+  .head-banner .banner-desc {
+    max-width: 530px;
+    margin: 100px 60px;
   }
 
   .tab-item {
@@ -552,15 +556,10 @@ input[type="radio"]:checked + label {
   }
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .container {
     max-width: 768px;
     padding: 20px 40px;
-  }
-
-  .head-banner .banner-desc {
-    max-width: 530px;
-    margin-left: 60px;
   }
 
   .burger-menu-button {
@@ -577,6 +576,9 @@ input[type="radio"]:checked + label {
   .nav-bar-menu {
     display: none;
   }
+  .head-banner .banner-desc {
+    margin: 100px 60px;
+  }
 
   .grid-menu-container {
     padding: 0 10px;
@@ -590,45 +592,16 @@ input[type="radio"]:checked + label {
   }
 }
 
-@media (max-width: 480px) {
-  h2 {
-    font-size: 52px;
-  }
-
-  h3 {
-    font-size: 40px;
-  }
-
-  h4 {
-    font-size: 24px;
-  }
-  .slider {
-    justify-content: center;
-  }
-  .slider .slider-button {
-    display: none;
-  }
-
-  .banner-button.button-primary {
-    padding: 1em 4em;
-  }
-  .banner-button:hover .icon {
-    position: absolute;
-    right: 2.5rem;
-    display: block;
+@media screen and (max-width: 720px) {
+  .head-banner .banner-desc {
+    margin: 60px 20px;
   }
 }
 
-@media (max-width: 380px) {
+@media screen and (max-width: 640px) {
   .container {
-    max-width: 380px;
-    width: 380px;
-    padding: 20px 16px;
-  }
-
-  .head-banner .banner-desc {
-    margin: 60px 16px;
-    width: 316px;
+    max-width: 640px;
+    padding: 20px;
   }
 
   h2 {
@@ -647,6 +620,39 @@ input[type="radio"]:checked + label {
     font-size: 24px;
     font-weight: 600;
     line-height: 30px;
+  }
+
+  .head-banner .banner-desc {
+    max-width: 316px;
+    margin: 60px 20px;
+  }
+
+  .slider {
+    justify-content: center;
+  }
+  .slider .slider-button {
+    display: none;
+  }
+
+  .banner-button.button-primary {
+    padding: 1em 4em;
+  }
+  .banner-button:hover .icon {
+    position: absolute;
+    right: 2.5rem;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .container {
+    max-width: 380px;
+    width: 380px;
+    padding: 20px 16px;
+  }
+
+  .head-banner .banner-desc {
+    margin: 60px 16px;
   }
 
   .banner-button.button-primary {
@@ -671,12 +677,15 @@ input[type="radio"]:checked + label {
 
   .grid-item {
     flex-direction: column;
-
     height: 590px;
+    min-height: 590px;
   }
 
+  .price {
+    margin: 4px auto;
+  }
   .mobile-desc {
-    margin: 40px auto;
+    margin: 0 auto;
     width: 348px;
   }
 
@@ -691,27 +700,33 @@ input[type="radio"]:checked + label {
 
   .mobile-presentation {
     gap: 40px;
-    margin: 40px auto;
+    margin: 0;
   }
 
   .mobile-desc {
-    margin: 0 auto;
+    padding-top: 0;
+    margin: 0;
+  }
+
+  .mobile-desc h3 {
+    margin: 0;
   }
 
   .footer {
-    /* margin: 40px auto; */
     padding: 60px 16px;
-    gap: 20px;
-  }
-  .social-button-container {
-    margin: 20px auto;
+    gap: 0;
   }
 
   .contacts-desc h4 {
     margin: 0;
   }
 
-  .contacts-desc ul:last-child {
+  .contacts-desc ul {
+    margin-top: 30px;
+  }
+
+  .contacts-desc ul,
+  .contacts-desc ul li:last-child {
     margin-bottom: 0;
   }
 }
