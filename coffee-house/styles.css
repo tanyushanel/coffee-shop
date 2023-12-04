@@ -685,21 +685,21 @@ input[type="radio"]:checked + label {
 
 @media screen and (max-width: 380px) {
   h2 {
-    font-size: 42px;
+    font-size: 2.625rem;
     font-weight: 600;
-    line-height: 48px;
+    line-height: 3rem;
   }
 
   h3 {
-    font-size: 32px;
+    font-size: 2rem;
     font-weight: 600;
-    line-height: 40px;
+    line-height: 2.5rem;
   }
 
   h4 {
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 600;
-    line-height: 30px;
+    line-height: 1.875rem;
   }
   .container {
     max-width: 380px;
@@ -722,6 +722,11 @@ input[type="radio"]:checked + label {
 
   .tab-container {
     gap: 8px;
+  }
+
+  a,
+  button {
+    pointer-events: none;
   }
 
   .slider {
