@@ -714,6 +714,15 @@ input[type="radio"]:checked + label {
     padding: 1.25rem 5rem;
   }
 
+  .tab-item {
+    padding: 8px;
+    padding-right: 16px;
+  }
+
+  .tab-container {
+    gap: 8px;
+  }
+
   .slider {
     justify-content: center;
   }
@@ -726,8 +735,9 @@ input[type="radio"]:checked + label {
 
   .grid-menu-container {
     padding: 0 10px;
-    max-height: 100%;
-    overflow: visible;
+
+    max-height: 2144px;
+    overflow: hidden;
   }
 
   .grid-container .grid-item {
@@ -735,9 +745,6 @@ input[type="radio"]:checked + label {
     min-height: 590px;
   }
 
-  .price {
-    margin: 4px auto;
-  }
   .mobile-desc {
     margin: 0 auto;
     width: 348px;
@@ -776,7 +783,7 @@ input[type="radio"]:checked + label {
   }
 
   .contacts-desc ul {
-    margin-top: 30px;
+    margin-top: 35px;
   }
 
   .contacts-desc ul,
