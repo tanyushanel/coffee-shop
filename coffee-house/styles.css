@@ -570,6 +570,10 @@ input[type="radio"]:checked + label {
     display: none;
   }
 
+  .burger-menu-button.menu-opened {
+    display: none;
+  }
+
   .nav-bar {
     justify-content: space-between;
   }
@@ -722,11 +726,6 @@ input[type="radio"]:checked + label {
 
   .tab-container {
     gap: 8px;
-  }
-
-  a,
-  button {
-    pointer-events: none;
   }
 
   .slider {
