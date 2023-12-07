@@ -132,6 +132,14 @@
   flex-wrap: wrap;
 }
 
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
 /* GENERAL STYLES */
 
 * {
@@ -208,17 +216,20 @@ button {
   padding: 1.25rem 2.5rem;
 }
 
-.nav-bar {
-  height: 55px;
-  margin-bottom: 25px;
-}
-
 .logo {
   object-fit: cover;
   object-position: 0 5px;
 }
 
-.nav-bar-menu {
+.nav-bar {
+  position: relative;
+  background: var(--bg-body-color);
+  height: 55px;
+  margin-bottom: 25px;
+}
+
+.nav-bar-menu,
+.menu-items {
   flex-basis: 74.25rem;
 }
 
@@ -228,26 +239,20 @@ button {
   line-height: 150%;
 }
 
-.burger-menu {
+.burger-menu-link {
   font-size: 1rem;
   font-weight: 600;
   line-height: 150%;
-}
-
-.nav-bar-menu a:hover,
-.burger-menu span:hover,
-.menu.burger-menu span {
-  box-shadow: 0px 2px 0px 0px var(--text-dark-color);
 }
 
 .burger-menu-button {
   display: none;
 }
 
-.burger-menu-link {
-  font-size: 2rem;
-  font-weight: 600;
-  line-height: 125%;
+.nav-bar-menu a:hover,
+.burger-menu-link span:hover,
+.menu.burger-menu-link span {
+  box-shadow: 0px 2px 0px 0px var(--text-dark-color);
 }
 
 .footer {
@@ -322,6 +327,11 @@ button {
 }
 
 .icon {
+  width: 20px;
+  height: 20px;
+}
+
+.banner-button .icon {
   display: none;
 }
 
@@ -566,20 +576,42 @@ input[type="radio"]:checked + label {
   .burger-menu-button {
     display: block;
   }
-  .burger-menu span {
-    display: none;
-  }
-
-  .burger-menu-button.menu-opened {
-    display: none;
-  }
 
   .nav-bar {
     justify-content: space-between;
   }
 
   .nav-bar-menu {
-    display: none;
+    background: var(--bg-body-color);
+    position: absolute;
+    top: 80px;
+    padding: 60px 0;
+    justify-content: flex-start;
+    flex-direction: column;
+    min-width: 100%;
+    z-index: 3;
+    gap: 100px;
+  }
+
+  .nav-bar-menu .menu-items {
+    gap: 60px;
+    flex-basis: content;
+    flex-direction: column;
+  }
+
+  .menu-items .menu-item a,
+  .burger-menu-link {
+    font-size: 2rem;
+    line-height: 40px;
+  }
+
+  .burger-menu-link .icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .burger-menu-link {
+    flex-basis: 20vh;
   }
 
   .head-banner .banner-img {
