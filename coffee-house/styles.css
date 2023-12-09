@@ -309,6 +309,27 @@ button {
 
 .slider {
   justify-content: space-between;
+  min-height: 684px;
+}
+
+.slider-content {
+  max-width: 480px;
+  overflow: hidden;
+}
+
+.slide {
+  transform: translateX(0);
+  transition: transform 1s ease-out;
+}
+
+.slide.slide-next {
+  transform: translateX(100%);
+  transition: transform 1s ease-out;
+}
+
+.slide.slide-back {
+  transform: translateX(-100%);
+  transition: transform 1s ease-out;
 }
 
 .slider-control {
@@ -317,7 +338,7 @@ button {
   border-radius: 100px;
 }
 
-.slider-control:first-child {
+.slider-control.active {
   border: 2px solid var(--border-dark-color);
 }
 
@@ -644,6 +665,7 @@ input[type="radio"]:checked + label {
 
   .slider-content {
     max-width: 480px;
+    overflow: hidden;
   }
 
   .grid-container {
