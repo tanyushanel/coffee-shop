@@ -175,6 +175,11 @@ h3 {
   line-height: 125%;
 }
 
+h3.center {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
 h4 {
   font-size: 1.5rem;
   font-weight: 600;
@@ -536,11 +541,6 @@ input[type="radio"]:checked + label {
 }
 
 @media screen and (min-width: 1440px) {
-  h3.center {
-    min-width: 800px;
-    margin: 0 auto;
-  }
-
   h4 {
     font-size: 1.5rem;
   }
