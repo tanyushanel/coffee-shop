@@ -333,13 +333,23 @@ button {
 }
 
 .slider-control {
+  position: relative;
+  overflow: hidden;
   width: 2.5rem;
-  border: 2px solid var(--border-light-color);
+  height: 3px;
+  background: var(--border-light-color);
   border-radius: 100px;
 }
 
-.slider-control.active {
-  border: 2px solid var(--border-dark-color);
+.slider-control.active span {
+  position: absolute;
+  left: 0;
+  width: 1px;
+  height: 100%;
+  transform-origin: left;
+  transform: scaleX(50);
+  background: var(--border-dark-color);
+  transition: transform 3s ease;
 }
 
 .slider-img {
@@ -532,6 +542,14 @@ input[type="radio"]:checked + label {
   .store-button:hover img {
     filter: invert(94%) sepia(9%) saturate(435%) hue-rotate(332deg)
       brightness(90%) contrast(96%);
+  }
+}
+
+@media (hover: none) {
+  .button-secondary.click {
+    color: var(--border-light-color);
+    background: var(--border-dark-color);
+    transition: background 0.5s ease-in-out;
   }
 }
 

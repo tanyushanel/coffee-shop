@@ -65,49 +65,48 @@ function assignSliderData() {
   for (let i = 0; i < sliderControls.length; i++) {
     sliderControls[i].classList.remove("active");
   }
-
   initSlide();
-  sliderControls[currentImage].classList.add("active");
 }
 
 function initSlide() {
+  sliderControls[currentImage].classList.add("active");
   if (slide.classList.contains("slide-next")) {
     slide.classList.remove("slide-next");
   }
   if (slide.classList.contains("slide-back")) {
     slide.classList.remove("slide-back");
   }
+
+  nextButton.classList.remove("click");
+  previousButton.classList.remove("click");
 }
 
 function slideNext(event) {
-  assignSliderData();
+  event.preventDefault();
+  currentImage--;
+  if (currentImage < 0) {
+    currentImage = sliderImages.length - 1;
+  }
+  slide.classList.add("slide-next");
+  nextButton.classList.add("click");
+}
+
+function slideBack(event) {
   event.preventDefault();
   currentImage++;
   if (currentImage >= sliderImages.length) {
     currentImage = 0;
   }
-
-  slide.classList.add("slide-next");
-}
-
-function slideBack(event) {
-  assignSliderData();
-  event.preventDefault();
-
-  currentImage--;
-  if (currentImage < 0) {
-    currentImage = sliderImages.length - 1;
-  }
-
   slide.classList.add("slide-back");
+  previousButton.classList.add("click");
 }
 
-["touchstart", "click"].forEach(function (evt) {
+["touchstart", "touchend", "click"].forEach(function (evt) {
   previousButton.addEventListener(evt, slideBack);
   slide.addEventListener("transitionend", assignSliderData);
 });
 
-["touchstart", "click"].forEach(function (evt) {
+["touchstart", "touchend", "click"].forEach(function (evt) {
   nextButton.addEventListener(evt, slideNext);
   slide.addEventListener("transitionend", assignSliderData);
 });
