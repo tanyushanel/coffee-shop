@@ -2,9 +2,8 @@
 
 /* Burger-menu */
 
-const burgerMenu = document.getElementsByClassName("menu-container")[0];
-const burgerMenuButton =
-  document.getElementsByClassName("burger-menu-button")[0];
+const burgerMenu = document.querySelector(".menu-container");
+const burgerMenuButton = document.querySelector(".burger-menu-button");
 
 function toggleMenu(event) {
   event.preventDefault();
@@ -17,101 +16,15 @@ function toggleMenu(event) {
     burgerMenuButton.src = "assets/icons/button-icon-burger-close.svg";
   }
 }
-["touchstart", "click"].forEach(function (evt) {
+["touchstart", "click"].forEach((evt) => {
   burgerMenuButton.addEventListener(evt, toggleMenu);
 });
 
-/* Slider */
+/* Secondary buttons */
 
-const sliderImages = [
-  {
-    src: "assets/pics/coffee-slider-1.png",
-    name: "S’mores Frappuccino",
-    desc: "This new drink takes an espresso and mixes it with brown sugar and cinnamon before being topped with oat milk",
-    price: "5.50",
-  },
-  {
-    src: "assets/pics/coffee-slider-2.png",
-    name: "Caramel macchiato",
-    desc: "Fragrant black coffee with Jameson Irish whiskey and whipped milk",
-    price: "7.50",
-  },
-  {
-    src: "assets/pics/coffee-slider-3.png",
-    name: "Ice coffee",
-    desc: "Classic coffee with milk and Kahlua liqueur under a cap of frothed milk",
-    price: "9.50",
-  },
-];
+const secondaryButtons = document.querySelectorAll(".button-secondary");
 
-let currentImage = 0;
-const previousButton = document.getElementsByClassName("previous")[0];
-const nextButton = document.getElementsByClassName("next")[0];
-
-const slide = document.getElementsByClassName("slide")[0];
-const slideImgElement = slide.getElementsByClassName("slider-img")[0];
-const slideNameElement = slide.getElementsByClassName("slider-item-name")[0];
-const slideDescElement = slide.getElementsByClassName("slider-item-desc")[0];
-const slidePrice = slide.getElementsByClassName("price")[0];
-
-const sliderControls = document.getElementsByClassName("slider-control");
-
-function assignSliderData() {
-  slideImgElement.src = sliderImages[currentImage].src;
-  slideNameElement.innerHTML = sliderImages[currentImage].name;
-  slideDescElement.innerHTML = sliderImages[currentImage].desc;
-  slidePrice.innerHTML = sliderImages[currentImage].price;
-
-  for (let i = 0; i < sliderControls.length; i++) {
-    sliderControls[i].classList.remove("active");
-  }
-
-  initSlide();
-  sliderControls[currentImage].classList.add("active");
-}
-
-function initSlide() {
-  if (slide.classList.contains("slide-next")) {
-    slide.classList.remove("slide-next");
-  }
-  if (slide.classList.contains("slide-back")) {
-    slide.classList.remove("slide-back");
-  }
-}
-
-function slideNext(event) {
-  assignSliderData();
-  event.preventDefault();
-  currentImage++;
-  if (currentImage >= sliderImages.length) {
-    currentImage = 0;
-  }
-
-  slide.classList.add("slide-next");
-}
-
-function slideBack(event) {
-  assignSliderData();
-  event.preventDefault();
-
-  currentImage--;
-  if (currentImage < 0) {
-    currentImage = sliderImages.length - 1;
-  }
-
-  slide.classList.add("slide-back");
-}
-
-["touchstart", "click"].forEach(function (evt) {
-  previousButton.addEventListener(evt, slideBack);
-  slide.addEventListener("transitionend", assignSliderData);
+Array.from(secondaryButtons).forEach((btn) => {
+  btn.addEventListener("touchstart", () => btn.classList.add("click"));
+  btn.addEventListener("transitionend", () => btn.classList.remove("click"));
 });
-
-["touchstart", "click"].forEach(function (evt) {
-  nextButton.addEventListener(evt, slideNext);
-  slide.addEventListener("transitionend", assignSliderData);
-});
-
-/* Category tab switching */
-/* Infinite loading */
-/* Modal */
