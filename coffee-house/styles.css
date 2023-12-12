@@ -313,6 +313,9 @@ button {
 }
 
 .slider-content {
+  display: flex;
+  flex-direction: row;
+
   max-width: 480px;
   overflow: hidden;
 }
@@ -426,19 +429,10 @@ button {
   padding-right: 18px;
   font-weight: 600;
   border: 1px solid var(--border-light-color);
+  border-radius: 100px;
 }
 
-input[type="radio"] {
-  position: absolute;
-  opacity: 0;
-  padding: 8px;
-  padding-right: 18px;
-  font-weight: 600;
-  border: 1px solid var(--border-light-color);
-}
-
-.tab-item:focus-within,
-input[type="radio"]:checked + label {
+.tab-item.active {
   color: var(--border-light-color);
   background: var(--border-dark-color);
 }
@@ -550,6 +544,21 @@ input[type="radio"]:checked + label {
     color: var(--border-light-color);
     background: var(--border-dark-color);
     transition: background 0.5s ease-in-out;
+  }
+
+  .button-secondary.click img {
+    filter: invert(94%) sepia(9%) saturate(435%) hue-rotate(332deg)
+      brightness(90%) contrast(96%);
+  }
+
+  .social-button.click {
+    background: var(--bg-body-color);
+    transition: background 0.5s ease;
+  }
+
+  .social-button.click img {
+    filter: invert(26%) sepia(7%) saturate(10%) hue-rotate(359deg)
+      brightness(90%) contrast(92%);
   }
 }
 
