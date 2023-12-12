@@ -1,39 +1,20 @@
 "use script";
-/* Slider */
-const sliderImages = [
-  {
-    src: "assets/pics/coffee-slider-1.png",
-    name: "S’mores Frappuccino",
-    desc: "This new drink takes an espresso and mixes it with brown sugar and cinnamon before being topped with oat milk",
-    price: "$5.50",
-  },
-  {
-    src: "assets/pics/coffee-slider-2.png",
-    name: "Caramel macchiato",
-    desc: "Fragrant black coffee with Jameson Irish whiskey and whipped milk",
-    price: "$7.50",
-  },
-  {
-    src: "assets/pics/coffee-slider-3.png",
-    name: "Ice coffee",
-    desc: "Classic coffee with milk and Kahlua liqueur under a cap of frothed milk",
-    price: "$9.50",
-  },
-];
 
-let slide = document.getElementsByClassName("slide")[0];
-const sliderContent = document.getElementsByClassName("slider-content")[0];
-const sliderControls = document.getElementsByClassName("slider-control");
-const previousButton = document.getElementsByClassName("previous")[0];
-const nextButton = document.getElementsByClassName("next")[0];
+import { sliderImages } from "/coffee-house/data.js";
+/* Slider */
+
+let slide = document.querySelector(".slide");
+const sliderControls = document.querySelectorAll(".slider-control");
+const previousButton = document.querySelector(".previous");
+const nextButton = document.querySelector(".next");
 
 let currentImage = 0;
 
 function assignSliderData() {
-  const slideImgElement = slide.getElementsByClassName("slider-img")[0];
-  const slideNameElement = slide.getElementsByClassName("slider-item-name")[0];
-  const slideDescElement = slide.getElementsByClassName("slider-item-desc")[0];
-  const slidePrice = slide.getElementsByClassName("price")[0];
+  const slideImgElement = slide.querySelector(".slider-img");
+  const slideNameElement = slide.querySelector(".slider-item-name");
+  const slideDescElement = slide.querySelector(".slider-item-desc");
+  const slidePrice = slide.querySelector(".price");
 
   for (let i = 0; i < sliderControls.length; i++) {
     sliderControls[i].classList.remove("active");

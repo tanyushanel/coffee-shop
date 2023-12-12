@@ -1,24 +1,63 @@
 "use strict";
 
-function openTab(evt, tabName) {
-  // Get all elements with class="tab-content" and hide them
-  const tabcontent = document.getElementsByClassName("tab-content");
-  for (let i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
+import { products, tabImages } from "/coffee-house/data.js";
 
-  // Get all elements with class="tab-link" and remove the class "active"
-  var tablinks = document.getElementsByClassName("tab-link");
-  for (var i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
+function createTabs(products) {
+  const categories = [...new Set(products.map((product) => product.category))];
+  const tabLinks = document.querySelector(".tab-container");
 
-  // Show the current tab, and add an "active" class to the button that opened the tab
-  document.getElementById(tabName).style.display = "block";
-  evt.currentTarget.className += " active";
+  categories.forEach((category, index) => {
+    const tabButton = document.createElement("li");
+    const tabImg = tabImages[index];
+
+    tabButton.className = "tab-item medium-txt flex-center gap-8";
+    tabButton.onclick = (event) => displayProducts(event, category);
+    tabLinks.appendChild(tabButton);
+
+    tabButton.innerHTML = `       
+        <img src=${tabImg.src} alt="tabImg" />
+        <span class="capitalize">${category}</span>
+    `;
+
+    if (index === 0) {
+      tabButton.click();
+    }
+  });
 }
 
-// Optionally: Set a default tab open on page load
-document.addEventListener("DOMContentLoaded", function () {
-  document.querySelector(".tab-link").click();
-});
+function displayProducts(event, category) {
+  const filteredProducts = products.filter(
+    (product) => product.category === category
+  );
+  const tabContent = document.getElementById("tab-content");
+  tabContent.innerHTML = "";
+
+  filteredProducts.forEach((product) => {
+    const productDiv = document.createElement("li");
+    productDiv.className = "grid-menu-item";
+    productDiv.innerHTML = `
+
+    <div class="grid-item">
+        <img src="${product.src}" alt="pic" />
+    </div>
+    <div class="grid-item-desc margin-20 flex gap-12">
+        <h4>${product.name}</h4>
+        <p class="medium-txt cut">
+            ${product.description}
+        </p>
+        <h4 class="price">$${product.price}</h4>
+    </div>          
+        `;
+    tabContent.appendChild(productDiv);
+  });
+
+  updateActiveTab(event);
+}
+
+function updateActiveTab(event) {
+  const tabLinks = document.querySelectorAll(".tab-item");
+  tabLinks.forEach((tab) => tab.classList.remove("active"));
+  event.currentTarget.classList.add("active");
+}
+
+document.addEventListener("DOMContentLoaded", () => createTabs(products));

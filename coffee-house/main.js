@@ -2,9 +2,8 @@
 
 /* Burger-menu */
 
-const burgerMenu = document.getElementsByClassName("menu-container")[0];
-const burgerMenuButton =
-  document.getElementsByClassName("burger-menu-button")[0];
+const burgerMenu = document.querySelector(".menu-container");
+const burgerMenuButton = document.querySelector(".burger-menu-button");
 
 function toggleMenu(event) {
   event.preventDefault();
@@ -23,13 +22,9 @@ function toggleMenu(event) {
 
 /* Secondary buttons */
 
-const secondaryButtons = document.getElementsByClassName("button-secondary");
+const secondaryButtons = document.querySelectorAll(".button-secondary");
 
 Array.from(secondaryButtons).forEach((btn) => {
   btn.addEventListener("touchstart", () => btn.classList.add("click"));
   btn.addEventListener("transitionend", () => btn.classList.remove("click"));
 });
-
-/* Category tab switching */
-/* Infinite loading */
-/* Modal */
