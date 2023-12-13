@@ -2,6 +2,12 @@
 
 import { products, tabImages } from "/coffee-house/data.js";
 
+const tabContent = document.getElementById("tab-content");
+const refreshButton = document.querySelector(".bttn-refresh");
+
+document.addEventListener("DOMContentLoaded", () => createTabs(products));
+refreshButton.addEventListener("transitionend", (event) => loadMore(event));
+
 function createTabs(products) {
   const categories = [...new Set(products.map((product) => product.category))];
   const tabLinks = document.querySelector(".tab-container");
@@ -11,7 +17,7 @@ function createTabs(products) {
     const tabImg = tabImages[index];
 
     tabButton.className = "tab-item medium-txt flex-center gap-8";
-    tabButton.onclick = (event) => displayProducts(event, category, 4);
+    tabButton.onclick = (event) => initLoadProducts(event, category, 4);
     tabLinks.appendChild(tabButton);
 
     tabButton.innerHTML = `       
@@ -44,7 +50,14 @@ function createItemDiv(product) {
   return productDiv;
 }
 
-function displayProducts(event, category, amount) {
+function displayProducts(products) {
+  products.forEach((product) => {
+    const newProduct = createItemDiv(product);
+    tabContent.appendChild(newProduct);
+  });
+}
+
+function initLoadProducts(event, category, amount) {
   const filteredProducts = products.filter(
     (product) => product.category === category
   );
@@ -53,18 +66,13 @@ function displayProducts(event, category, amount) {
     ? filteredProducts.slice(0, amount)
     : filteredProducts;
 
-  const tabContent = document.getElementById("tab-content");
   tabContent.innerHTML = "";
-
-  shownProducts.forEach((product) => {
-    const newProduct = createItemDiv(product);
-    tabContent.appendChild(newProduct);
-  });
+  displayProducts(shownProducts);
 
   if (shownProducts.length === filteredProducts.length) {
-    document.querySelector(".bttn-refresh").classList.add("hide");
+    refreshButton.classList.add("hide");
   } else {
-    document.querySelector(".bttn-refresh").classList.remove("hide");
+    refreshButton.classList.remove("hide");
   }
 
   updateActiveTab(event);
@@ -73,35 +81,26 @@ function displayProducts(event, category, amount) {
 function updateActiveTab(event) {
   const tabLinks = document.querySelectorAll(".tab-item");
   tabLinks.forEach((tab) => tab.classList.remove("active"));
-  console.log(event.currentTarget);
   event.currentTarget.classList.add("active");
 }
 
-document.addEventListener("DOMContentLoaded", () => createTabs(products));
-
-function loadMore() {
-  const tabContent = document.getElementById("tab-content");
+function loadMore(event) {
   const shownProducts = tabContent.querySelectorAll(".grid-menu-item");
-  const category = document
-    .querySelector(".tab-item.active")
-    .innerText.toLowerCase();
+  const category = document.querySelector(".active").innerText.toLowerCase();
   const filteredProducts = products.filter(
     (product) => product.category === category
   );
 
   const hiddenProducts = filteredProducts.slice(
     shownProducts.length,
-    shownProducts.length + 4
+    shownProducts.length + 2
   );
 
-  hiddenProducts.forEach((product) => {
-    const newProduct = createItemDiv(product);
-    tabContent.appendChild(newProduct);
-  });
+  displayProducts(hiddenProducts);
 
   if (!hiddenProducts.length) {
     document.querySelector(".bttn-refresh").classList.add("hide");
   }
-}
 
-document.addEventListener("transitionend", loadMore);
+  updateActiveTab(event);
+}
