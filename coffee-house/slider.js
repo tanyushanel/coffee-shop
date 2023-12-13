@@ -1,6 +1,6 @@
 "use script";
 
-import { sliderImages } from "/coffee-house/data.js";
+import { sliderImages } from "./data.js";
 /* Slider */
 
 let slide = document.querySelector(".slide");

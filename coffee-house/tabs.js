@@ -1,6 +1,6 @@
 "use strict";
 
-import { products, tabImages } from "/coffee-house/data.js";
+import { products, tabImages } from "./data.js";
 
 const tabContent = document.getElementById("tab-content");
 const refreshButton = document.querySelector(".bttn-refresh");
