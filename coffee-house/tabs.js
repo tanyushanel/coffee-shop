@@ -11,7 +11,7 @@ function createTabs(products) {
     const tabImg = tabImages[index];
 
     tabButton.className = "tab-item medium-txt flex-center gap-8";
-    tabButton.onclick = (event) => displayProducts(event, category);
+    tabButton.onclick = (event) => displayProducts(event, category, 4);
     tabLinks.appendChild(tabButton);
 
     tabButton.innerHTML = `       
@@ -25,14 +25,19 @@ function createTabs(products) {
   });
 }
 
-function displayProducts(event, category) {
+function displayProducts(event, category, amount) {
   const filteredProducts = products.filter(
     (product) => product.category === category
   );
+
+  const shownProducts = amount
+    ? filteredProducts.slice(0, amount)
+    : filteredProducts;
+
   const tabContent = document.getElementById("tab-content");
   tabContent.innerHTML = "";
 
-  filteredProducts.forEach((product) => {
+  shownProducts.forEach((product) => {
     const productDiv = document.createElement("li");
     productDiv.className = "grid-menu-item";
     productDiv.innerHTML = `
@@ -61,3 +66,42 @@ function updateActiveTab(event) {
 }
 
 document.addEventListener("DOMContentLoaded", () => createTabs(products));
+
+function loadMore() {
+  const tabContent = document.getElementById("tab-content");
+  const shownProducts = tabContent.querySelectorAll(".grid-menu-item");
+  const category = document.querySelector(".active").innerText.toLowerCase();
+  const filteredProducts = products.filter(
+    (product) => product.category === category
+  );
+
+  const hiddenProducts = filteredProducts.slice(
+    shownProducts.length,
+    shownProducts.length + 4
+  );
+
+  hiddenProducts.forEach((product) => {
+    const productDiv = document.createElement("li");
+    productDiv.className = "grid-menu-item";
+    productDiv.innerHTML = `
+  
+      <div class="grid-item">
+          <img src="${product.src}" alt="pic" />
+      </div>
+      <div class="grid-item-desc margin-20 flex gap-12">
+          <h4>${product.name}</h4>
+          <p class="medium-txt cut">
+              ${product.description}
+          </p>
+          <h4 class="price">$${product.price}</h4>
+      </div>          
+          `;
+    tabContent.appendChild(productDiv);
+  });
+
+  if (!hiddenProducts.length) {
+    document.getElementById("load-more").style.display = "none";
+  }
+}
+
+document.addEventListener("touchend", loadMore);
