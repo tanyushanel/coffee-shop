@@ -22,6 +22,10 @@
   display: block;
 }
 
+.hide {
+  display: none;
+}
+
 /* FORMAT CLASSES */
 
 .margin-100 {
@@ -718,6 +722,10 @@ button {
   .bttn-refresh {
     display: flex;
     margin: 40px auto;
+  }
+
+  .bttn-refresh.hide {
+    display: none;
   }
 
   .mobile-img {

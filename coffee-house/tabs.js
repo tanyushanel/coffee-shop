@@ -25,6 +25,25 @@ function createTabs(products) {
   });
 }
 
+function createItemDiv(product) {
+  const productDiv = document.createElement("li");
+  productDiv.className = "grid-menu-item";
+  productDiv.innerHTML = `
+
+  <div class="grid-item">
+      <img src="${product.src}" alt="pic" />
+  </div>
+  <div class="grid-item-desc margin-20 flex gap-12">
+      <h4>${product.name}</h4>
+      <p class="medium-txt cut">
+          ${product.description}
+      </p>
+      <h4 class="price">$${product.price}</h4>
+  </div>          
+      `;
+  return productDiv;
+}
+
 function displayProducts(event, category, amount) {
   const filteredProducts = products.filter(
     (product) => product.category === category
@@ -38,22 +57,8 @@ function displayProducts(event, category, amount) {
   tabContent.innerHTML = "";
 
   shownProducts.forEach((product) => {
-    const productDiv = document.createElement("li");
-    productDiv.className = "grid-menu-item";
-    productDiv.innerHTML = `
-
-    <div class="grid-item">
-        <img src="${product.src}" alt="pic" />
-    </div>
-    <div class="grid-item-desc margin-20 flex gap-12">
-        <h4>${product.name}</h4>
-        <p class="medium-txt cut">
-            ${product.description}
-        </p>
-        <h4 class="price">$${product.price}</h4>
-    </div>          
-        `;
-    tabContent.appendChild(productDiv);
+    const newProduct = createItemDiv(product);
+    tabContent.appendChild(newProduct);
   });
 
   updateActiveTab(event);
@@ -100,7 +105,7 @@ function loadMore() {
   });
 
   if (!hiddenProducts.length) {
-    document.getElementById("load-more").style.display = "none";
+    document.querySelector(".bttn-refresh").classList.add("hide");
   }
 }
 
