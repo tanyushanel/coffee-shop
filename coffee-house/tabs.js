@@ -101,6 +101,4 @@ function loadMore(event) {
   if (!hiddenProducts.length) {
     document.querySelector(".bttn-refresh").classList.add("hide");
   }
-
-  updateActiveTab(event);
 }
