@@ -22,6 +22,10 @@
   display: block;
 }
 
+.hide {
+  display: none;
+}
+
 /* FORMAT CLASSES */
 
 .margin-100 {
@@ -361,7 +365,7 @@ button {
   transform-origin: left;
   transform: scaleX(50);
   background: var(--border-dark-color);
-  transition: transform 3s ease;
+  transition: transform 2s ease;
 }
 
 .slider-img {
@@ -444,6 +448,7 @@ button {
 .tab-item.active {
   color: var(--border-light-color);
   background: var(--border-dark-color);
+  transition: background 0.5s ease-in-out;
 }
 
 .tab-item img {
@@ -712,13 +717,16 @@ button {
 
   .grid-menu-container {
     padding: 0 10px;
-    max-height: 1052px;
     overflow: hidden;
   }
 
   .bttn-refresh {
     display: flex;
     margin: 40px auto;
+  }
+
+  .bttn-refresh.hide {
+    display: none;
   }
 
   .mobile-img {
