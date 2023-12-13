@@ -360,7 +360,7 @@ button {
   transform-origin: left;
   transform: scaleX(50);
   background: var(--border-dark-color);
-  transition: transform 3s ease;
+  transition: transform 2s ease;
 }
 
 .slider-img {
@@ -443,6 +443,7 @@ button {
 .tab-item.active {
   color: var(--border-light-color);
   background: var(--border-dark-color);
+  transition: background 0.5s ease-in-out;
 }
 
 .tab-item img {
