@@ -6,23 +6,23 @@ export function createModal(product) {
 
   modal.innerHTML = `  
     <div class="modal-body flex gap-12">    
-    <img class="modal-img " src="${product.src}" alt="picture" />
+    <img class="modal-img" src="${product.src}" alt="picture" />
     <div>
     <h4 class="modal-title">${product.name}</h4>
     <p class="modal-desc medium-txt">${product.description}</p>
     <div>
         <span>Size</span>
         <ul>
-        <li>
-            <span class="capitalize">S</span>
+        <li class="tab-item">
+            <span class="tab-img">S</span>
             <span>${product.sizes.s.size}</span>
         </li>
-        <li>
-            <span class="capitalize">M</span>
+        <li class="tab-item">
+            <span class="tab-img">M</span>
             <span>${product.sizes.m.size}</span>
         </li>
-        <li>
-            <span class="capitalize">L</span>
+        <li class="tab-item">
+            <span class="tab-img">L</span>
             <span>${product.sizes.l.size}</span>
         </li>
         </ul>
@@ -30,23 +30,20 @@ export function createModal(product) {
     <div>
         <span>Additives</span>
         <ul>
-        <li>
-            <span class="capitalize"
-            >${product.additives[0].name}</span
-            >
-            <span>${product.additives[0]["add-price"]}</span>
+        <li class="tab-item">
+        <span class="tab-img">1
+        </span >
+            <span>${product.additives[0].name}</span>
         </li>
-        <li>
-            <span class="capitalize"
-            >${product.additives[1].name}</span
+        <li class="tab-item">
+            <span class="tab-img">2</span
             >
-            <span>${product.additives[1]["add-price"]}</span>
+            <span>${product.additives[1].name}</span>
         </li>
-        <li>
-            <span class="capitalize"
-            >${product.additives[2].name}</span
+        <li class="tab-item">
+            <span class="tab-img">3</span
             >
-            <span>${product.additives[2]["add-price"]}</span>
+            <span>${product.additives[2].name}</span>
         </li>
         </ul>
     </div>
@@ -113,3 +110,7 @@ document.querySelector(".modal-overlay").addEventListener("click", (event) => {
     closeAll();
   }
 });
+
+// document.querySelector(".tab-item").addEventListener("click", () => {
+//   document.querySelector(".tab-item").classList.add("active");
+// });

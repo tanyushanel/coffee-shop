@@ -22,7 +22,7 @@ function createTabs(products) {
     tabLinks.appendChild(tabButton);
 
     tabButton.innerHTML = `       
-        <img src=${tabImg.src} alt="tabImg" />
+        <img class="tab-img" src=${tabImg.src} alt="tabImg" />
         <span class="capitalize">${category}</span>
     `;
 
