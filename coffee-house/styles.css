@@ -811,6 +811,10 @@ button {
   .contacts-desc ul li:last-child {
     margin-bottom: 0;
   }
+
+  .modal {
+    max-width: 688px;
+  }
 }
 
 @media screen and (min-width: 381px) and (max-width: 767px) {
@@ -952,5 +956,12 @@ button {
   .contacts-desc ul,
   .contacts-desc ul li:last-child {
     margin-bottom: 0;
+  }
+
+  .modal {
+    max-width: 342px;
+  }
+  .modal-img {
+    display: none;
   }
 }
