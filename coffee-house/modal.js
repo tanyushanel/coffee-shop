@@ -109,7 +109,3 @@ document.querySelector(".modal-overlay").addEventListener("click", (event) => {
     closeAll();
   }
 });
-
-// document.querySelector(".tab-item").addEventListener("click", () => {
-//   document.querySelector(".tab-item").classList.add("active");
-// });

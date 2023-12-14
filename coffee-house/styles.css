@@ -501,7 +501,7 @@ button {
 }
 
 .bttn-refresh {
-  display: none;
+  margin: 40px auto;
 }
 
 /* Modal */
