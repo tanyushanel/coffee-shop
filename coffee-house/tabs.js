@@ -1,6 +1,7 @@
 "use strict";
 
 import { products, tabImages } from "./data.js";
+import { openModal, closeModal } from "./modal.js";
 
 const tabContent = document.getElementById("tab-content");
 const refreshButton = document.querySelector(".bttn-refresh");
@@ -47,6 +48,10 @@ function createItemDiv(product) {
       <h4 class="price">$${product.price}</h4>
   </div>          
       `;
+
+  productDiv.addEventListener("click", function () {
+    openModal(product);
+  });
   return productDiv;
 }
 

@@ -1,40 +1,25 @@
 "use strict";
 
-document.addEventListener("DOMContentLoaded", () => {
-  const openModalButtons = document.querySelectorAll("[data-modal-target]");
-  const closeModalButtons = document.querySelectorAll("[data-close-button]");
-  const overlay = document.getElementById("overlay");
+export function openModal(product) {
+  document.querySelector(".modal-title").textContent = product.name;
+  document.querySelector(".modal-img").textContent = product.name;
+  document.querySelector(".modal-desc").textContent = product.description;
+  document.querySelector(".modal-price").textContent = `$${product.price}`;
+  document.querySelector(".modal").style.display = "block";
+}
 
-  openModalButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      const modal = document.querySelector(button.dataset.modalTarget);
-      openModal(modal);
-    });
-  });
+export function closeModal() {
+  document.getElementById("modal").style.display = "none";
+}
 
-  overlay.addEventListener("click", () => {
-    const modals = document.querySelectorAll(".modal.active");
-    modals.forEach((modal) => {
-      closeModal(modal);
-    });
-  });
+document.addEventListener("click", function (event) {
+  const modal = document.getElementById("modal");
 
-  closeModalButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      const modal = button.closest(".modal");
-      closeModal(modal);
-    });
-  });
-
-  function openModal(modal) {
-    if (modal == null) return;
-    modal.style.display = "block";
-    overlay.style.display = "block";
+  if (event.target === modal) {
+    closeModal();
   }
+});
 
-  function closeModal(modal) {
-    if (modal == null) return;
-    modal.style.display = "none";
-    overlay.style.display = "none";
-  }
+document.querySelector(".modal").addEventListener("click", function (event) {
+  if (event) event.stopPropagation();
 });
