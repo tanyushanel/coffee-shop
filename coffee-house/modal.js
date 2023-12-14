@@ -16,14 +16,17 @@ export function createModal(product) {
         <li class="tab-item active">
             <span class="tab-img">S</span>
             <span>${product.sizes.s.size}</span>
+            <span class="addition hide">${product.sizes.s["add-price"]}</span>
         </li>
         <li class="tab-item">
             <span class="tab-img">M</span>
             <span>${product.sizes.m.size}</span>
+            <span class="addition hide">${product.sizes.m["add-price"]}</span>
         </li>
         <li class="tab-item">
             <span class="tab-img">L</span>
             <span>${product.sizes.l.size}</span>
+            <span class="addition hide">${product.sizes.l["add-price"]}</span>
         </li>
         </ul>
     </div>
@@ -39,6 +42,7 @@ export function createModal(product) {
             <span class="tab-img">2</span
             >
             <span>${product.additives[1].name}</span>
+            <span class="addition hide">${product.additives[0]["add-price"]}</span>
         </li>
         <li class="tab-item">
             <span class="tab-img">3</span
@@ -69,7 +73,21 @@ export function createModal(product) {
     if (event) event.stopPropagation();
   });
 
+  const modalPrice = modal.querySelector(".modal-price");
+
   return modal;
+}
+
+function updateTotalPrice(product, modal) {
+  let totalPrice = parseFloat(product.price);
+  const selectedAdditives = modal.querySelectorAll(".tab-item.active");
+
+  selectedAdditives.forEach((additive) => {
+    totalPrice += parseFloat(additive.dataset.addPrice);
+  });
+
+  const priceElement = modal.querySelector(".modal-price");
+  priceElement.textContent = `$${totalPrice.toFixed(2)}`;
 }
 
 export function openModal(product) {
