@@ -253,6 +253,7 @@ button {
 }
 
 .burger-menu-button {
+  cursor: pointer;
   display: none;
 }
 
