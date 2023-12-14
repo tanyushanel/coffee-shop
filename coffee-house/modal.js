@@ -103,7 +103,6 @@ export function closeAll() {
   });
   overlays.forEach((el) => {
     el.style.display = "none";
-    el.remove();
   });
 }
 document.querySelector(".modal-overlay").addEventListener("click", (event) => {
