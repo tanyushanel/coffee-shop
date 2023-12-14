@@ -39,7 +39,7 @@ function initSlide() {
 }
 
 function slideNext(event) {
-  event.preventDefault();
+  if (event) event.preventDefault();
   currentImage++;
   if (currentImage >= sliderImages.length) {
     currentImage = 0;
@@ -49,7 +49,7 @@ function slideNext(event) {
 }
 
 function slideBack(event) {
-  event.preventDefault();
+  if (event) event.preventDefault();
   currentImage--;
   if (currentImage < 0) {
     currentImage = sliderImages.length - 1;
@@ -57,6 +57,24 @@ function slideBack(event) {
 
   slide.classList.add("slide-back");
 }
+
+let touchStartX = 0;
+let touchEndX = 0;
+
+function handleGesture() {
+  const swipeThreshold = window.innerWidth * 0.1;
+  if (touchEndX < touchStartX - swipeThreshold) slideNext();
+  if (touchEndX > touchStartX + swipeThreshold) slideBack();
+}
+
+slide.addEventListener("touchstart", (e) => {
+  touchStartX = e.changedTouches[0].screenX;
+});
+
+slide.addEventListener("touchend", (e) => {
+  touchEndX = e.changedTouches[0].screenX;
+  handleGesture();
+});
 
 ["touchstart", "click", "transitionend"].forEach((evt) => {
   nextButton.addEventListener(evt, slideNext);
