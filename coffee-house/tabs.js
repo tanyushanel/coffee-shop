@@ -1,7 +1,7 @@
 "use strict";
 
 import { products, tabImages } from "./data.js";
-import { openModal, closeModal } from "./modal.js";
+import { openModal } from "./modal.js";
 
 const tabContent = document.getElementById("tab-content");
 const refreshButton = document.querySelector(".bttn-refresh");
@@ -89,7 +89,7 @@ function updateActiveTab(event) {
   event.currentTarget.classList.add("active");
 }
 
-function loadMore(event) {
+function loadMore() {
   const shownProducts = tabContent.querySelectorAll(".grid-menu-item");
   const category = document.querySelector(".active").innerText.toLowerCase();
   const filteredProducts = products.filter(

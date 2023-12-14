@@ -507,21 +507,28 @@ button {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: white;
-  padding: 20px;
+  background-color: var(--bg-body-color);
+  width: 800px;
+  padding: 16px;
+  border-radius: 40px;
   z-index: 1000;
   display: none;
 }
 
-#modal-overlay {
+.modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.7);
-  z-index: 1000;
+  background: var(--bg-backdrop-color);
+  z-index: 999;
   display: none;
+}
+
+.modal-img {
+  max-width: 310px;
+  border-radius: 40px;
 }
 
 /* MEDIA QUERIES */

@@ -1,25 +1,116 @@
 "use strict";
 
+export function createModal(product) {
+  const modal = document.createElement("div");
+  modal.className = "modal";
+
+  modal.innerHTML = `  
+    <div class="modal-body flex gap-12">    
+    <img class="modal-img " src="${product.src}" alt="picture" />
+    <div>
+    <h4 class="modal-title">${product.name}</h4>
+    <p class="modal-desc medium-txt">${product.description}</p>
+    <div>
+        <span>Size</span>
+        <ul>
+        <li>
+            <span class="capitalize">S</span>
+            <span>${product.sizes.s.size}</span>
+        </li>
+        <li>
+            <span class="capitalize">M</span>
+            <span>${product.sizes.m.size}</span>
+        </li>
+        <li>
+            <span class="capitalize">L</span>
+            <span>${product.sizes.l.size}</span>
+        </li>
+        </ul>
+    </div>
+    <div>
+        <span>Additives</span>
+        <ul>
+        <li>
+            <span class="capitalize"
+            >${product.additives[0].name}</span
+            >
+            <span>${product.additives[0]["add-price"]}</span>
+        </li>
+        <li>
+            <span class="capitalize"
+            >${product.additives[1].name}</span
+            >
+            <span>${product.additives[1]["add-price"]}</span>
+        </li>
+        <li>
+            <span class="capitalize"
+            >${product.additives[2].name}</span
+            >
+            <span>${product.additives[2]["add-price"]}</span>
+        </li>
+        </ul>
+    </div>
+    <h4>
+        <span>Total:</span>
+        <span class="modal-price">$${product.price}</span>
+    </h4>
+    <hr />
+    <p class="caption-txt">
+        <span class="material-symbols-outlined"> info </span>
+        <p>The cost is not final. Download our mobile app to see the final
+        price and place your order. Earn loyalty points and enjoy your
+        favorite coffee with up to 20% discount.<p>
+    </p>
+    <button class="close-button" data-close-button>Close</button>
+    </div>   
+    </div>
+    `;
+
+  const closeButton = modal.querySelector(".close-button");
+  closeButton.addEventListener("click", () => closeModal(modal));
+
+  modal.addEventListener("click", function (event) {
+    if (event) event.stopPropagation();
+  });
+
+  return modal;
+}
+
 export function openModal(product) {
-  document.querySelector(".modal-title").textContent = product.name;
-  document.querySelector(".modal-img").textContent = product.name;
-  document.querySelector(".modal-desc").textContent = product.description;
-  document.querySelector(".modal-price").textContent = `$${product.price}`;
+  const modal = createModal(product);
+  document.body.appendChild(modal);
   document.querySelector(".modal").style.display = "block";
+  document.querySelector(".modal-overlay").style.display = "block";
 }
 
-export function closeModal() {
-  document.getElementById("modal").style.display = "none";
+export function closeModal(modal) {
+  modal.style.display = "none";
+  modal.remove();
+  closeOverlay();
 }
 
-document.addEventListener("click", function (event) {
-  const modal = document.getElementById("modal");
+function closeOverlay() {
+  const overlay = document.querySelector(".modal-overlay");
+  overlay.style.display = "none";
+}
 
-  if (event.target === modal) {
-    closeModal();
+export function closeAll() {
+  const modals = document.querySelectorAll(".modal");
+  const overlays = document.querySelectorAll(".modal-overlay");
+  modals.forEach((el) => {
+    el.style.display = "none";
+    el.remove();
+  });
+  overlays.forEach((el) => {
+    el.style.display = "none";
+    el.remove();
+  });
+}
+document.querySelector(".modal-overlay").addEventListener("click", (event) => {
+  if (
+    !event.target.classList.contains("modal") &&
+    !event.target.classList.contains("overlay")
+  ) {
+    closeAll();
   }
-});
-
-document.querySelector(".modal").addEventListener("click", function (event) {
-  if (event) event.stopPropagation();
 });
