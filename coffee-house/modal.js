@@ -13,7 +13,7 @@ export function createModal(product) {
     <div class="margin-20">
         <span>Size</span>
         <ul class="margin-15">
-        <li class="tab-item">
+        <li class="tab-item active">
             <span class="tab-img">S</span>
             <span>${product.sizes.s.size}</span>
         </li>
@@ -30,7 +30,7 @@ export function createModal(product) {
     <div class="margin-20">
         <span>Additives</span>
         <ul class="margin-15">
-        <li class="tab-item">
+        <li class="tab-item active">
         <span class="tab-img">1
         </span >
             <span>${product.additives[0].name}</span>

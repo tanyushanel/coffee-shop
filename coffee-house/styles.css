@@ -537,6 +537,10 @@ button {
   border-radius: 40px;
 }
 
+.modal .tab-item.active .mobile-img {
+  color: var(--text-dark-color);
+}
+
 .modal .close-button {
   padding: 10px;
   width: 100%;
