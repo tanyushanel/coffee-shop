@@ -95,7 +95,8 @@
 .caption-txt {
   font-size: 10px;
   font-weight: 600;
-  line-height: 140%;
+  /* line-height: 140%; */
+  line-height: 14px;
 }
 
 .light-color {
@@ -532,7 +533,22 @@ button {
 
 .modal-img {
   max-width: 310px;
+  max-height: 310px;
   border-radius: 40px;
+}
+
+.modal .close-button {
+  padding: 10px;
+  width: 100%;
+}
+
+.modal .total {
+  justify-content: space-between;
+}
+
+.modal .info {
+  padding: 16px;
+  border-top: 1px solid var(--border-light-color);
 }
 
 /* MEDIA QUERIES */

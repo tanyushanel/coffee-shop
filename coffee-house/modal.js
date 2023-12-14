@@ -9,10 +9,10 @@ export function createModal(product) {
     <img class="modal-img" src="${product.src}" alt="picture" />
     <div>
     <h4 class="modal-title">${product.name}</h4>
-    <p class="modal-desc medium-txt">${product.description}</p>
-    <div>
+    <p class="modal-desc medium-txt margin-20">${product.description}</p>
+    <div class="margin-20">
         <span>Size</span>
-        <ul>
+        <ul class="margin-15">
         <li class="tab-item">
             <span class="tab-img">S</span>
             <span>${product.sizes.s.size}</span>
@@ -27,9 +27,9 @@ export function createModal(product) {
         </li>
         </ul>
     </div>
-    <div>
+    <div class="margin-20">
         <span>Additives</span>
-        <ul>
+        <ul class="margin-15">
         <li class="tab-item">
         <span class="tab-img">1
         </span >
@@ -47,18 +47,17 @@ export function createModal(product) {
         </li>
         </ul>
     </div>
-    <h4>
+    <h4 class="flex total ">
         <span>Total:</span>
         <span class="modal-price">$${product.price}</span>
     </h4>
-    <hr />
-    <p class="caption-txt">
-        <span class="material-symbols-outlined"> info </span>
-        <p>The cost is not final. Download our mobile app to see the final
+    <p class="flex gap-8 info margin-20">
+        <span class="material-symbols-outlined medium-txt"> info </span>
+        <span class="caption-txt">The cost is not final. Download our mobile app to see the final
         price and place your order. Earn loyalty points and enjoy your
-        favorite coffee with up to 20% discount.<p>
+        favorite coffee with up to 20% discount.<span>
     </p>
-    <button class="close-button" data-close-button>Close</button>
+    <button class="close-button button-secondary" data-close-button>Close</button>
     </div>   
     </div>
     `;
