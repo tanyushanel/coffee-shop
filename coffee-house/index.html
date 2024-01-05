@@ -25,30 +25,36 @@
 
   <body>
     <div class="container">
-      <header>
-        <div class="flex-center nav-bar">
-          <h1 class="invisible">Coffee House</h1>
-          <a href="index.html">
-            <img class="logo" src="assets/icons/logo.png" alt="logo" />
-          </a>
-          <ul class="flex-center nav-bar-menu gap-40">
+      <div class="flex-center nav-bar">
+        <h1 class="invisible">Coffee House</h1>
+        <a href="index.html">
+          <img class="logo" src="assets/icons/logo.svg" alt="logo" />
+        </a>
+        <nav class="flex nav-bar-menu menu-container">
+          <ul class="flex-center gap-40 menu-items">
             <li class="menu-item"><a href="#slider">Favorite coffee</a></li>
             <li class="menu-item"><a href="#about">About</a></li>
             <li class="menu-item"><a href="#mobile">Mobile app</a></li>
             <li class="menu-item"><a href="#contact">Contact us</a></li>
           </ul>
-          <a href="menu.html" class="burger-menu">
-            <img
-              class="burger-menu-button"
-              src="assets/icons/menu-burger.png"
-              alt="burger-menu-pic"
-            />
-            <span class="flex-center gap-10">
-              Menu <img src="assets/icons/coffee-cup.png" alt="coffee-cup" />
-            </span>
-          </a>
-        </div>
-
+          <div class="flex-center burger-menu-link">
+            <a class="flex gap-10" href="menu.html">
+              <span>Menu</span>
+              <img
+                class="icon"
+                src="assets/icons/coffee-cup.svg"
+                alt="coffee-cup"
+              />
+            </a>
+          </div>
+        </nav>
+        <img
+          class="burger-menu-button"
+          src="assets/icons/button-icon-burger.svg"
+          alt="burger-menu-pic"
+        />
+      </div>
+      <header>
         <div class="head-banner">
           <img class="banner-img" src="assets/pics/img-hero.jpg" alt="banner" />
           <div class="banner-desc">
@@ -70,7 +76,7 @@
                 Menu
                 <img
                   class="icon"
-                  src="assets/icons/coffee-cup.png"
+                  src="assets/icons/coffee-cup.svg"
                   alt="coffee-cup"
                 />
               </span>
@@ -82,30 +88,32 @@
         <article id="slider" class="slider-container center">
           <h3>Choose your <span class="accent-txt">favorite</span> coffee</h3>
           <div class="flex-center slider margin-40">
-            <button class="flex-center slider-button button-secondary">
+            <button class="flex-center slider-button previous button-secondary">
               <span class="material-symbols-outlined"> arrow_back </span>
             </button>
             <div class="slider-content">
-              <img
-                class="slider-img"
-                src="assets/pics/coffee-slider-1.png"
-                alt="pic"
-              />
-              <h4 class="margin-15">S’mores Frappuccino</h4>
-              <p class="medium-txt margin-15">
-                This new drink takes an espresso and mixes it with brown sugar
-                and cinnamon before being topped with oat milk.
-              </p>
-              <h4 class="price">$5.50</h4>
+              <div class="slide">
+                <img
+                  class="slider-img"
+                  src="assets/pics/coffee-slider-1.png"
+                  alt="pic"
+                />
+                <h4 class="slider-item-name margin-15">S’mores Frappuccino</h4>
+                <p class="slider-item-desc medium-txt margin-15">
+                  This new drink takes an espresso and mixes it with brown sugar
+                  and cinnamon before being topped with oat milk.
+                </p>
+                <h4 class="price">$5.50</h4>
+              </div>
             </div>
-            <button class="flex-center slider-button button-secondary">
+            <button class="flex-center slider-button next button-secondary">
               <span class="material-symbols-outlined"> arrow_forward </span>
             </button>
           </div>
           <div class="flex-center slider-controls gap-10">
-            <p class="slider-control"></p>
-            <p class="slider-control"></p>
-            <p class="slider-control"></p>
+            <p class="active slider-control"><span></span></p>
+            <p class="slider-control"><span></span></p>
+            <p class="slider-control"><span></span></p>
           </div>
         </article>
         <article id="about" class="about-container margin-100">
@@ -145,24 +153,16 @@
             </p>
             <div class="flex store-button-container gap-20">
               <button class="flex store-button button-secondary gap-8">
-                <img src="assets/icons/app-icon.png" alt="app-icon" />
-                <img
-                  class="hover"
-                  src="assets/icons/app-icon-hover.png"
-                  alt="app-icon"
-                />
+                <img src="assets/icons/app-icon.svg" alt="app-icon" />
+
                 <span class="button-desc left">
                   <span class="caption-txt">Available on the</span>
                   <span>App Store</span>
                 </span>
               </button>
               <button class="flex store-button button-secondary gap-8">
-                <img src="assets/icons/gp-icon.png" alt="gp-icon" />
-                <img
-                  class="hover"
-                  src="assets/icons/gp-icon-hover.png"
-                  alt="gp-icon"
-                />
+                <img src="assets/icons/gp-icon.svg" alt="gp-icon" />
+
                 <span class="button-desc left">
                   <span class="caption-txt">Available on</span>
                   <span>Google Play</span>
@@ -184,25 +184,14 @@
             <span class="accent-txt">It’s coffee time! </span>
           </h3>
           <div class="flex social-button-container margin-40 gap-12">
-            <button class="flex-center social-button">
-              <img src="assets/icons/tweet.png" alt="tweet-pic" />
-              <img
-                class="hover"
-                src="assets/icons/tweet-hover.png"
-                alt="tweet-pic"
-              />
+            <button class="flex-center social-button button-secondary">
+              <img src="assets/icons/tweet.svg" alt="tweet-pic" />
             </button>
-            <button class="flex-center social-button">
-              <img src="assets/icons/instagram.png" alt="inst-pic" />
-              <img
-                class="hover"
-                src="assets/icons/instagram-hover.png"
-                alt="inst-pic"
-              />
+            <button class="flex-center social-button button-secondary">
+              <img src="assets/icons/instagram.svg" alt="inst-pic" />
             </button>
-            <button class="flex-center social-button">
-              <img src="assets/icons/fb.png" alt="fb-pic" />
-              <img class="hover" src="assets/icons/fb-hover.png" alt="fb-pic" />
+            <button class="flex-center social-button button-secondary">
+              <img src="assets/icons/fb.svg" alt="fb-pic" />
             </button>
           </div>
         </article>
@@ -211,7 +200,7 @@
 
           <ul class="margin-40">
             <li class="flex margin-20 gap-10">
-              <img src="assets/icons/location.png" alt="loc-icon" />
+              <img src="assets/icons/location.svg" alt="loc-icon" />
               <a
                 class="medium-txt"
                 href="https://www.google.com/maps/search/8558+Green+Rd.,+LA"
@@ -221,19 +210,21 @@
             </li>
 
             <li class="flex margin-20 gap-10">
-              <img src="assets/icons/path.png" alt="phone-icon" />
+              <img src="assets/icons/phone-icon.svg" alt="phone-icon" />
               <a class="medium-txt" href="tel:1(603)555-0123"
                 >+1 (603) 555-0123
               </a>
             </li>
 
             <li class="flex margin-20 gap-10">
-              <img src="assets/icons/clock.png" alt="clock-icon" />
+              <img src="assets/icons/clock.svg" alt="clock-icon" />
               <a class="medium-txt">Mon-Sat: 9:00 AM – 23:00 PM </a>
             </li>
           </ul>
         </div>
       </footer>
     </div>
+    <script type="module" src="main.js"></script>
+    <script type="module" src="slider.js"></script>
   </body>
 </html>

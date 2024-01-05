@@ -29,24 +29,31 @@
         <div class="flex-center nav-bar">
           <h1 class="invisible">Coffee House</h1>
           <a href="index.html">
-            <img class="logo" src="assets/icons/logo.png" alt="logo"
-          /></a>
-          <ul class="flex-center nav-bar-menu gap-40">
-            <li class="menu-item"><a href="#slider">Favorite coffee</a></li>
-            <li class="menu-item"><a href="#about">About</a></li>
-            <li class="menu-item"><a href="#mobile">Mobile app</a></li>
-            <li class="menu-item"><a href="#contact">Contact us</a></li>
-          </ul>
-          <a href="menu.html" class="menu burger-menu">
-            <img
-              class="burger-menu-button"
-              src="assets/icons/menu-burger.png"
-              alt="burger-menu-pic"
-            />
-            <span class="flex-center gap-10">
-              Menu <img src="assets/icons/coffee-cup.png" alt="coffee-cup" />
-            </span>
+            <img class="logo" src="assets/icons/logo.svg" alt="logo" />
           </a>
+          <nav class="flex nav-bar-menu menu-container">
+            <ul class="flex-center gap-40 menu-items">
+              <li class="menu-item"><a href="#slider">Favorite coffee</a></li>
+              <li class="menu-item"><a href="#about">About</a></li>
+              <li class="menu-item"><a href="#mobile">Mobile app</a></li>
+              <li class="menu-item"><a href="#contact">Contact us</a></li>
+            </ul>
+            <div class="flex-center gap-10 burger-menu-link">
+              <a class="flex gap-10" href="menu.html">
+                <span>Menu</span>
+                <img
+                  class="icon"
+                  src="assets/icons/coffee-cup.svg"
+                  alt="coffee-cup"
+                />
+              </a>
+            </div>
+          </nav>
+          <img
+            class="burger-menu-button"
+            src="assets/icons/button-icon-burger.svg"
+            alt="burger-menu-pic"
+          />
         </div>
       </header>
       <main>
@@ -55,160 +62,14 @@
             Behind each of our cups hides an
             <span class="accent-txt"> amazing surprise</span>
           </h3>
-          <ul class="tab-container flex-center gap-12 margin-40">
-            <li>
-              <input
-                type="radio"
-                id="coffee"
-                name="menu-tab"
-                value="coffee"
-                checked
-              />
-              <label
-                for="coffee"
-                class="tab-item button-secondary medium-txt flex-center gap-8"
-              >
-                <img src="assets/icons/cup.png" alt="cup" /> Coffee
-              </label>
-            </li>
-            <li>
-              <input type="radio" id="tea" name="menu-tab" value="tea" />
-              <label
-                for="tea"
-                class="tab-item button-secondary medium-txt flex-center gap-8"
-              >
-                <img src="assets/icons/pot.png" alt="pot" />
-                Tea</label
-              >
-            </li>
-            <li>
-              <input
-                type="radio"
-                id="dessert"
-                name="menu-tab"
-                value="dessert"
-              />
-              <label
-                for="dessert"
-                class="tab-item button-secondary medium-txt flex-center gap-8"
-              >
-                <img src="assets/icons/dessert.png" alt="des" />
-                Dessert
-              </label>
-            </li>
-          </ul>
+          <ul class="tab-container flex-center gap-12 margin-40"></ul>
           <article>
-            <ul class="grid-menu-container flex-center gap-40">
-              <li class="grid-menu-item">
-                <div class="grid-item">
-                  <img src="assets/pics/coffee-1.jpg" alt="pic" />
-                </div>
-                <div class="grid-item-desc margin-20 flex gap-12">
-                  <a href="#"><h4>Espresso</h4></a>
-                  <p class="medium-txt cut">
-                    Fragrant black coffee with Jameson Irish whiskey and whipped
-                    milk
-                  </p>
-                  <h4 class="price">$7.00</h4>
-                </div>
-              </li>
-              <li class="grid-menu-item">
-                <div class="grid-item">
-                  <img src="assets/pics/coffee-2.jpg" alt="pic" />
-                </div>
-                <div class="grid-item-desc margin-20 flex gap-12">
-                  <a href="#"><h4>Espresso</h4></a>
-                  <p class="medium-txt cut">
-                    Fragrant black coffee with Jameson Irish whiskey and whipped
-                    milk
-                  </p>
-                  <h4 class="price">$4.50</h4>
-                </div>
-              </li>
-
-              <li class="grid-menu-item">
-                <div class="grid-item">
-                  <img src="assets/pics/coffee-3.jpg" alt="pic" />
-                </div>
-
-                <div class="grid-item-desc margin-20 flex gap-12">
-                  <a href="#">
-                    <h4>Coffee with cognac</h4>
-                  </a>
-                  <p class="medium-txt cut">
-                    Fragrant black coffee with cognac and whipped cream
-                  </p>
-                  <h4 class="price">$4.50</h4>
-                </div>
-              </li>
-              <li class="grid-menu-item">
-                <div class="grid-item">
-                  <img src="assets/pics/coffee-4.jpg" alt="pic" />
-                </div>
-
-                <div class="grid-item-desc margin-20 flex gap-12">
-                  <a href="#"><h4>Espresso</h4></a>
-                  <p class="medium-txt cut">
-                    Fragrant black coffee with Jameson Irish whiskey and whipped
-                    milk
-                  </p>
-                  <h4 class="price">$7.00</h4>
-                </div>
-              </li>
-              <li class="grid-menu-item">
-                <div class="grid-item">
-                  <img src="assets/pics/coffee-5.jpg" alt="pic" />
-                </div>
-                <div class="grid-item-desc margin-20 flex gap-12">
-                  <a href="#"><h4>Espresso</h4></a>
-                  <p class="medium-txt cut">
-                    Fragrant black coffee with Jameson Irish whiskey and whipped
-                    milk
-                  </p>
-                  <h4 class="price">$7.00</h4>
-                </div>
-              </li>
-              <li class="grid-menu-item">
-                <div class="grid-item">
-                  <img src="assets/pics/coffee-6.jpg" alt="pic" />
-                </div>
-                <div class="grid-item-desc margin-20 flex gap-12">
-                  <a href="#"><h4>Espresso</h4></a>
-                  <p class="medium-txt cut">
-                    Fragrant black coffee with Jameson Irish whiskey and whipped
-                    milk
-                  </p>
-                  <h4 class="price">$7.00</h4>
-                </div>
-              </li>
-              <li class="grid-menu-item">
-                <div class="grid-item">
-                  <img src="assets/pics/coffee-7.jpg" alt="pic" />
-                </div>
-                <div class="grid-item-desc margin-20 flex gap-12">
-                  <a href="#"><h4>Espresso</h4></a>
-                  <p class="medium-txt cut">
-                    Fragrant black coffee with Jameson Irish whiskey and whipped
-                    milk
-                  </p>
-                  <h4 class="price">$7.00</h4>
-                </div>
-              </li>
-              <li class="grid-menu-item">
-                <div class="grid-item">
-                  <img src="assets/pics/coffee-8.jpg" alt="pic" />
-                </div>
-                <div class="grid-item-desc margin-20 flex gap-12">
-                  <a href="#"><h4>Espresso</h4></a>
-                  <p class="medium-txt cut">
-                    Fragrant black coffee with Jameson Irish whiskey and whipped
-                    milk
-                  </p>
-                  <h4 class="price">$7.00</h4>
-                </div>
-              </li>
-            </ul>
+            <ul
+              id="tab-content"
+              class="grid-menu-container flex-center gap-40"
+            ></ul>
             <button
+              id="load-more"
               class="flex-center slider-button button-secondary bttn-refresh"
             >
               <span class="material-symbols-outlined"> refresh </span>
@@ -221,28 +82,18 @@
       >
         <article id="contact" class="contacts-heading">
           <h3 class="light-color">
-            Sip, Savor, Smile. <span class="accent-txt">It’s coffee time!</span>
+            Sip, Savor, Smile.
+            <span class="accent-txt">It’s coffee time! </span>
           </h3>
           <div class="flex social-button-container margin-40 gap-12">
-            <button class="flex-center social-button">
-              <img src="assets/icons/tweet.png" alt="tweet-pic" />
-              <img
-                class="hover"
-                src="assets/icons/tweet-hover.png"
-                alt="tweet-pic"
-              />
+            <button class="flex-center social-button button-secondary">
+              <img src="assets/icons/tweet.svg" alt="tweet-pic" />
             </button>
-            <button class="flex-center social-button">
-              <img src="assets/icons/instagram.png" alt="inst-pic" />
-              <img
-                class="hover"
-                src="assets/icons/instagram-hover.png"
-                alt="inst-pic"
-              />
+            <button class="flex-center social-button button-secondary">
+              <img src="assets/icons/instagram.svg" alt="inst-pic" />
             </button>
-            <button class="flex-center social-button">
-              <img src="assets/icons/fb.png" alt="fb-pic" />
-              <img class="hover" src="assets/icons/fb-hover.png" alt="fb-pic" />
+            <button class="flex-center social-button button-secondary">
+              <img src="assets/icons/fb.svg" alt="fb-pic" />
             </button>
           </div>
         </article>
@@ -251,7 +102,7 @@
 
           <ul class="margin-40">
             <li class="flex margin-20 gap-10">
-              <img src="assets/icons/location.png" alt="loc-icon" />
+              <img src="assets/icons/location.svg" alt="loc-icon" />
               <a
                 class="medium-txt"
                 href="https://www.google.com/maps/search/8558+Green+Rd.,+LA"
@@ -261,19 +112,21 @@
             </li>
 
             <li class="flex margin-20 gap-10">
-              <img src="assets/icons/path.png" alt="phone-icon" />
+              <img src="assets/icons/phone-icon.svg" alt="phone-icon" />
               <a class="medium-txt" href="tel:1(603)555-0123"
                 >+1 (603) 555-0123
               </a>
             </li>
 
             <li class="flex margin-20 gap-10">
-              <img src="assets/icons/clock.png" alt="clock-icon" />
+              <img src="assets/icons/clock.svg" alt="clock-icon" />
               <a class="medium-txt">Mon-Sat: 9:00 AM – 23:00 PM </a>
             </li>
           </ul>
         </div>
       </footer>
     </div>
+    <script type="module" src="main.js"></script>
+    <script type="module" src="tabs.js"></script>
   </body>
 </html>
